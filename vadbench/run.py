@@ -73,7 +73,7 @@ def worker(manifest_path, output, backend):
                 timing=timing,manifest_sha256=hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
                 source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')},
                 environment=dict(python=platform.python_version(),platform=platform.platform(),numpy=np.__version__,
-                    cpu_model=next((line.split(':',1)[1].strip() for line in Path('/proc/cpuinfo').read_text().splitlines() if line.startswith('model name')),'unknown')), 
+                    cpu_model=next((line.split(':',1)[1].strip() for line in Path('/proc/cpuinfo').read_text().splitlines() if line.startswith('model name')),'unknown')),
                 methodology=dict(capture_quantum_s=.01,tail_policy='drop incomplete native frame; exclude uncovered grid',
                     latency='simulated acquisition time, excludes measured computation',timing='includes causal resampling, dispatch, buffering, inference; excludes WAV read/reset; one pass',
                     memory='isolated backend process peak RSS, includes full corpus trace storage; not model-only RAM'))

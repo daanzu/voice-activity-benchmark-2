@@ -1,7 +1,10 @@
 """Explicit synthetic labels, score alignment, common endpointing, dev calibration."""
 import numpy as np
+from scipy.stats import chi2
 
 GRID = 0.01
+THRESHOLDS = np.unique(np.round(np.r_[np.arange(.05,.9,.05), np.arange(.9,.99,.01),
+    np.arange(.99,1,.0001), .99991,.99995,.99999,.999999,.9999999,1.,1.001], 7))
 
 def interval_mask(times, intervals):
     result = np.zeros(len(times), dtype=bool)
@@ -99,11 +102,14 @@ def evaluate(records,traces,threshold,task='speech'):
     def quantile(xs,q):
         return float(np.quantile(xs,q)) if xs else None
     negative_s=(fp+tn)*GRID
+    hours=negative_s/3600
+    poisson_ci=[float(chi2.ppf(.025,2*false_events)/2/hours) if false_events else 0.,float(chi2.ppf(.975,2*(false_events+1))/2/hours)] if hours else None
     return dict(threshold=float(threshold),task=task,tp=tp,fp=fp,fn=fn,tn=tn,
                 missed_speech_fraction=fn/(tp+fn) if tp+fn else None,
                 false_positive_fraction=fp/(fp+tn) if fp+tn else None,
                 false_activations=false_events, fragmentation_events=fragmentations, ambiguous_events=ambiguous_events, negative_hours=negative_s/3600,
                 false_activations_per_negative_hour=false_events/(negative_s/3600) if negative_s else None,
+                false_activation_rate_poisson95=poisson_ci,
                 excluded_seconds=excluded*GRID,reference_events=reference_events,
                 detected_events=detected_events,event_recall=detected_events/reference_events if reference_events else None,
                 onset_clipping_p50_s=quantile(onset,.5),onset_clipping_p95_s=quantile(onset,.95),
@@ -116,7 +122,7 @@ def evaluate(records,traces,threshold,task='speech'):
 
 def calibrate(records,traces,target_false_events=5.0):
     # Includes an explicit never-positive setting; report if this is selected.
-    candidates=[evaluate(records,traces,t) for t in np.r_[np.arange(.05,1,.05),.999,1.001]]
+    candidates=[evaluate(records,traces,t) for t in THRESHOLDS]
     feasible=[r for r in candidates if (r['false_activations_per_negative_hour'] or 0)<=target_false_events and (r['false_positive_fraction'] or 0)<=.01]
     best=min(feasible,key=lambda r:(r['missed_speech_fraction'],r['false_positive_fraction'],r['threshold']))
     return best,candidates
