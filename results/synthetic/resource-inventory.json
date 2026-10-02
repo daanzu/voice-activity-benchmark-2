@@ -1,0 +1,37 @@
+{
+  "artifacts": {
+    "silero_model": {
+      "bytes": 2327524,
+      "sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3"
+    },
+    "fsmn_model": {
+      "bytes": 1730426,
+      "sha256": "756887ce01695a9bb00dd85ca0f743653de03b18ba54d2e9ef4f4bb9b3edbf9f"
+    },
+    "rnnoise_native": {
+      "bytes": 14865288,
+      "sha256": "830f2e17a615dc8850133f8d382a116d8476a3aaf91de7c621ef72ee6094464f"
+    },
+    "agc2_native": {
+      "bytes": 238664,
+      "sha256": "b8c44c9c7b1a49d46482f8ab0cfca8b804891470ae60c3b9bfdeac688760df8c"
+    },
+    "speex_native": {
+      "bytes": 108184,
+      "sha256": "8b50638de8725f8b54284382c54e138475507239ffb69069375627e22436c1d9"
+    },
+    "ten_native": {
+      "bytes": 313240,
+      "sha256": "5abfe6bf6e9a4fcea6b440240f0a9a0f431ab5006e48a4e16465ebe681ffd90f"
+    },
+    "classic_native": {
+      "bytes": 189360,
+      "sha256": "281c23c3213181c71da9a206689b3c664bcd0a426dd341b47a882cf5b8faf496"
+    },
+    "onnxruntime_package": {
+      "installed_tree_bytes": 40531987,
+      "note": "Includes all installed package files, not compressed download size"
+    }
+  },
+  "note": "Artifact sizes only; excludes dependency closure except separately named package. Never interpret as RAM."
+}

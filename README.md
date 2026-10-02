@@ -4,6 +4,10 @@ A reproducible, **limited CPU-throughput experiment** for classic WebRTC VAD and
 
 This is not a seven-backend accuracy benchmark. Only classic WebRTC and direct Silero ONNX inference were timed. No real-world VAD accuracy, boundary accuracy, power consumption, or end-to-end application latency was measured.
 
+## New synthetic streaming evaluation
+
+The common-interface seven-backend extension is documented in [docs/RUN_SYNTHETIC.md](docs/RUN_SYNTHETIC.md). It generates 80 minutes of split-disjoint synthetic scenarios with known source placement, explicit activity-label uncertainty, development-only calibration, and a held-out evaluation. See [the synthetic results](results/synthetic/REPORT.md). Historical measurements below remain unchanged.
+
 ## Contents
 
 - [REPORT.md](REPORT.md): full comparison, source references, measured results, and limitations
