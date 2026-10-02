@@ -1,0 +1,24 @@
+VAD throughput and context experiment, 2026-10-02
+
+Measured environment: cloud Linux x86_64, Python 3.12.14, AMD EPYC 9V74 80-Core Processor reported by /proc/cpuinfo, NumPy 2.3.5, ONNX Runtime 1.19.0 CPU provider, intra/inter-op threads=1. Shared cloud host, no CPU pinning or frequency controls. Five measured runs after one discarded run per condition; each run constructs a fresh detector outside the timer. Only streaming calls are timed. Native classic module was already built from checkout e8fb8b736111631ae8aa6f29fc9b7498ce893ccf; its original compiler invocation was not retained.
+
+Inputs: repository 8kHz int16 test-audio.raw, repeated to 60 seconds; seeded uniform noise; silence. The 16kHz experiment uses simple sample repetition of the 8kHz fixture, explicitly ONLY for throughput and output-difference checks, not audio-quality testing. Input framing and PCM conversion happen outside timing. Includes Python dispatch, model context concatenation/state feedback, and inference. Excludes startup, device capture, realistic resampling, segmentation, and input-format conversion.
+
+The direct ONNX wrapper uses NumPy with the official Silero past-context/state algorithm, not the official Torch-based Python package. The no-context comparison changes only context concatenation while keeping the same model/runtime/input. It approximates the lite source's input treatment, but is NOT a run of lite's native binary and not an accuracy test. lite binary loading failed because its ELF requires an executable stack, which this environment rejects. No security settings were changed.
+
+Reproduce from this directory (network/toolchain required):
+  git clone https://github.com/daanzu/py-webrtcvad-wheels.git
+  git -C py-webrtcvad-wheels checkout e8fb8b736111631ae8aa6f29fc9b7498ce893ccf
+  (cd py-webrtcvad-wheels && python setup.py build_ext --inplace)
+  python -m pip install --target packages numpy==2.3.5 onnxruntime==1.19.0 silero-vad-lite==0.2.1
+  curl -L https://raw.githubusercontent.com/snakers4/silero-vad/1e261b036686cd0017d500ee96acd1c4ba572a9d/src/silero_vad/data/silero_vad.onnx -o silero_current.onnx
+  OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python bench.py
+  OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python bench16.py
+
+Scripts copied from measured runs with only workspace paths made relative. For portability, setup.py build step may need setuptools installed. No model/third-party binaries included in this archive. Installed lite provides the old model without loading its binary. Recorded files are bench-output.txt, bench16-output.txt and corresponding JSON summaries.
+
+Model SHA256:
+  lite/v5.1: 2623a2953f6ff3d2c1e61740c6cdb7168133479b267dfef114a4a3cc5bdd788f
+  current: 1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3
+
+No AGC2 RNN, TEN, FSMN, Cobra, RNNoise or Speex runtime measurements were performed. Do not infer cross-hardware timings or real-world accuracy from these small experiments.

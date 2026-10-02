@@ -1,0 +1,8 @@
+.venv/
+packages/
+py-webrtcvad-wheels/
+*.onnx
+*.so
+__pycache__/
+*.pyc
+results/local/
