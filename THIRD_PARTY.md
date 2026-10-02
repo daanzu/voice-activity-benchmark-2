@@ -11,3 +11,7 @@ Other dependencies and data are obtained separately, not vendored:
 - [NumPy](https://numpy.org/): arrays and seeded input generation, BSD license and bundled third-party notices.
 
 The repository owner selected the license in [LICENSE](LICENSE) when creating this repository. It is preserved unchanged. Upstream components retain their respective licenses and required notices.
+
+## Synthetic benchmark extension
+
+The independent adapters and generation/evaluation scripts follow the repository license. Their separately fetched dependencies retain their own terms. See [native backend notices](docs/NATIVE_BACKENDS.md), [FSMN model/frontend provenance](docs/FSMN_BACKEND.md), and [Flite/FFmpeg synthesis provenance](docs/DATASET.md). TEN is an opt-in external library with additional restrictions; no TEN code, model, or binary is redistributed here. No other model/library/audio assets are bundled.

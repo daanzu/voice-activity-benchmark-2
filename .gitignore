@@ -6,3 +6,7 @@ py-webrtcvad-wheels/
 __pycache__/
 *.pyc
 results/local/
+.deps/
+data/
+results/synthetic/raw/
+*.wav
