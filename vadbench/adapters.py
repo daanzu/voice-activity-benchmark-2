@@ -64,6 +64,9 @@ def create(name):
         return ClassicAdapter(int(name.split('-')[1]))
     if name == 'silero':
         return SileroAdapter()
+    if name.startswith('silero-lite-'):
+        from .silero_lite import BACKEND_VERSIONS, SileroLiteAdapter
+        return SileroLiteAdapter(BACKEND_VERSIONS[name])
     if name == 'fsmn':
         from .fsmn import FsmnAdapter
         return FsmnAdapter()

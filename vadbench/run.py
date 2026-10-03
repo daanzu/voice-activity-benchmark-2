@@ -14,7 +14,8 @@ import numpy as np
 from .adapters import create
 from .streaming import StreamResampler
 
-BACKENDS=['classic-0','classic-1','classic-2','classic-3','silero','agc2','ten','fsmn','rnnoise','speex']
+BACKENDS=['classic-0','classic-1','classic-2','classic-3','silero',
+          'silero-lite-0.3.0','silero-lite-0.4.0','agc2','ten','fsmn','rnnoise','speex']
 
 def read_audio(path):
     with wave.open(str(path),'rb') as wav:

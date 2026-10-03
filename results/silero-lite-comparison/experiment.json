@@ -1,0 +1,40 @@
+{
+  "recorded_date_utc": "2026-10-03",
+  "base_commit": "b72660dee11c419e08acb13d442e6dbc240e426f",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "primary_build_environment": {
+    "CC": "gcc",
+    "CXX": "g++"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exact_original_manifest_bytes": true,
+  "manifest_sha256": "73b60d803250b52d2c5cdea7e3a6458a3cf6907a2c171e4610a4b0234cbed52a",
+  "inference_run_policy": "One warmed measured corpus pass per configuration, fresh sequential process; no timing selection among repetitions",
+  "backend_execution_order": [
+    "classic-0",
+    "classic-1",
+    "classic-2",
+    "classic-3",
+    "silero",
+    "agc2",
+    "ten",
+    "fsmn",
+    "rnnoise",
+    "speex",
+    "silero-lite-0.3.0",
+    "silero-lite-0.4.0"
+  ],
+  "silero_lite_native_gnu_stack": "RW (not executable), verified by readelf for both pinned wheels",
+  "source_snapshot_note": "Per-worker source hashes are recorded at completion. Earlier workers lack or predate the new lite/report modules; inherited adapter and runner inference code was unchanged. Calibration metrics code and thresholds were unchanged.",
+  "limitations": [
+    "Shared unpinned cloud CPU; no frequency/affinity control",
+    "Synthetic source-activity proxies, not human phonetic labels",
+    "Run-to-run timing variability is not estimated"
+  ]
+}

@@ -8,6 +8,8 @@ This is not a seven-backend accuracy benchmark. Only classic WebRTC and direct S
 
 The common-interface seven-backend extension is documented in [docs/RUN_SYNTHETIC.md](docs/RUN_SYNTHETIC.md). It generates 80 minutes of split-disjoint synthetic scenarios with known source placement, explicit activity-label uncertainty, development-only calibration, and a held-out evaluation. See [the synthetic results](results/synthetic/REPORT.md). Historical measurements below remain unchanged.
 
+The [published Silero package comparison](results/silero-lite-comparison/REPORT.md) adds actual `silero-vad-lite` **0.3.0 and 0.4.0** native wheels and reruns all seven previous backends on the identical corpus. See [package isolation, model provenance, and reproduction](docs/SILERO_LITE.md). Both new releases already include the context/reset correction; 0.4.0's model is byte-identical to the existing direct-ONNX baseline.
+
 ## Contents
 
 - [REPORT.md](REPORT.md): full comparison, source references, measured results, and limitations

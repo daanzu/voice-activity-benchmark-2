@@ -15,3 +15,5 @@ The repository owner selected the license in [LICENSE](LICENSE) when creating th
 ## Synthetic benchmark extension
 
 The independent adapters and generation/evaluation scripts follow the repository license. Their separately fetched dependencies retain their own terms. See [native backend notices](docs/NATIVE_BACKENDS.md), [FSMN model/frontend provenance](docs/FSMN_BACKEND.md), and [Flite/FFmpeg synthesis provenance](docs/DATASET.md). TEN is an opt-in external library with additional restrictions; no TEN code, model, or binary is redistributed here. No other model/library/audio assets are bundled.
+
+The [published-package extension](docs/SILERO_LITE.md) additionally executes the native [silero-vad-lite 0.3.0](https://pypi.org/project/silero-vad-lite/0.3.0/) and [0.4.0](https://pypi.org/project/silero-vad-lite/0.4.0/) wheels. These MIT-licensed packages bundle Silero models and ONNX Runtime; their upstream licenses and third-party notices continue to apply. Wheels, installed packages, models and native binaries are fetched privately and not redistributed by this repository.
