@@ -12,13 +12,13 @@ __generated_with = "0.25.1"
 app = marimo.App(width="full", app_title="VAD comparison explorer")
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import marimo as mo
     return (mo,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import base64
     import json
@@ -27,7 +27,7 @@ def _():
     return base64, json, zlib, go
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(base64, json, zlib):
     # Generated from committed results by scripts/build_explorer_data.py.
     # BEGIN EMBEDDED RESULTS
@@ -1094,7 +1094,7 @@ def _(base64, json, zlib):
     return (result_sets,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     # VAD comparison explorer
@@ -1108,7 +1108,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo, result_sets):
     result_set = mo.ui.dropdown(
         options={v["label"]: k for k, v in result_sets.items()},
@@ -1123,13 +1123,13 @@ def _(mo, result_sets):
     return result_set, preset
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(result_set, result_sets):
     dataset = result_sets[result_set.value]
     return (dataset,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     STYLES = {
         "agc2": ("#af4b91", "solid", "circle"),
@@ -1179,7 +1179,7 @@ def _():
     return METRICS, STYLES, preset_selection
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(dataset, mo, preset, preset_selection):
     detectors = mo.ui.multiselect(
         options=list(dataset["curves"]),
@@ -1190,7 +1190,7 @@ def _(dataset, mo, preset, preset_selection):
     return (detectors,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(dataset, mo):
     _d = dataset["dataset"]
     _c = dataset["calibration"]
@@ -1209,7 +1209,7 @@ def _(dataset, mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     plot_kind = mo.ui.dropdown(
         options={
@@ -1232,7 +1232,7 @@ def _(mo):
     return plot_kind, axes
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(METRICS, mo, plot_kind):
     if plot_kind.value == "performance":
         _keys = ["wall_rtf", "cpu_rtf", "startup_s", "peak_process_rss_kib"]
@@ -1250,7 +1250,7 @@ def _(METRICS, mo, plot_kind):
     return metric, show_points
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(METRICS, STYLES, go):
     def make_figure(data, names, kind, metric_key, full_axes=False, points=False):
         """Build only from stored values; no evaluation, selection, or inference."""
@@ -1398,7 +1398,7 @@ def _(METRICS, STYLES, go):
     return (make_figure,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(axes, dataset, detectors, make_figure, metric, plot_kind, show_points):
     figure, warnings, selected_rows = make_figure(
         dataset, detectors.value, plot_kind.value, metric.value,
@@ -1407,7 +1407,7 @@ def _(axes, dataset, detectors, make_figure, metric, plot_kind, show_points):
     return figure, warnings, selected_rows
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(figure, mo, warnings):
     mo.vstack([
         *[mo.callout(w, kind="warn") for w in warnings],
@@ -1416,7 +1416,7 @@ def _(figure, mo, warnings):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo, plot_kind):
     if plot_kind.value.startswith("dev"):
         _note = "**Development only.** Stars mark frozen development choices. Binary classic modes are points, not interpolated curves. Lines follow the recorded threshold order; event-rate curves need not be monotonic. The 1.001 threshold is deliberately never-positive."
@@ -1428,11 +1428,11 @@ def _(mo, plot_kind):
         _note = "**Holdout metrics only.** Frozen thresholds were chosen on development data; fixed references were set in advance and are not complete vendor-default detectors. There is no holdout threshold sweep here. Missing conditional latency is not zero; matched-event delays must be read with event recall, clipping and fragmentation. Negative end delays indicate early cutoff. Delays use simulated acquisition time with a common 200 ms silence controller, exclude compute scheduling, and omit EOF-forced endings."
     if plot_kind.value in {"dev_events", "holdout_tradeoff"}:
         _note += " Known-negative exposure is under an hour per split; observed zero events does not establish zero real-world risk. Holdout source rows include descriptive Poisson intervals."
-    mo.callout(_note, kind="info")
+    mo.callout(mo.md(_note), kind="info")
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(dataset, json, mo, plot_kind, result_set, selected_rows):
     mo.accordion({
         "Exact plotted source rows / download": mo.vstack([
