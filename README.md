@@ -12,7 +12,7 @@ The [published Silero package comparison](results/silero-lite-comparison/REPORT.
 
 ## Interactive comparisons
 
-Use the [marimo notebook](notebooks/README.md) to compare a smaller detector subset with searchable selection, presets, stable colors, exact-value tooltips, and zoomable development/holdout/performance graphs. It reads saved results only; no benchmark rerun is needed. [Open the interactive browser preview](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm). GitHub's ordinary file view is static; this link runs the notebook in your browser.
+Use the [marimo notebook](notebooks/README.md) to compare a smaller detector subset with searchable selection, presets, stable colors, exact-value tooltips, and zoomable development/holdout/performance graphs. It reads saved results only; no benchmark rerun is needed. [Open the interactive browser preview](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm?mode=read&show-code=false). GitHub's ordinary file view is static; this link runs the notebook in your browser.
 
 ## Contents
 

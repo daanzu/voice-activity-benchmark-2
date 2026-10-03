@@ -1,6 +1,6 @@
 # Interactive benchmark explorer
 
-[Open the interactive notebook in your browser](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm)
+[Open the interactive notebook in your browser](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm?mode=read&show-code=false)
 
 `explore_results.py` is a standalone [marimo](https://marimo.io/) notebook for the committed benchmark results. It starts with three detectors instead of an overlapping full field. No models, audio, native VAD libraries, benchmark reruns, or credentials are needed.
 
