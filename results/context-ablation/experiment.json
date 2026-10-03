@@ -1,0 +1,39 @@
+{
+  "recorded_date_utc": "2026-10-03",
+  "base_commit": "a0f9e600dfdba202d9d960ea4679f3eed7a37328",
+  "inference_execution_order": [
+    [
+      "context-disabled",
+      "context-enabled"
+    ],
+    [
+      "context-enabled",
+      "context-disabled"
+    ],
+    [
+      "context-disabled",
+      "context-enabled"
+    ]
+  ],
+  "accuracy_policy": "The first pass supplies accuracy; second and third are bitwise-identical repeat checks, not extra statistical samples",
+  "timing_policy": "All three warmed full-corpus passes retained; separate sequential fresh processes; no affinity or frequency control",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "old_native_package_executed": false,
+  "security_settings_changed": false,
+  "source_classification": "Controlled same-runtime emulation of old tensor contract, not old native-package benchmark",
+  "corpus_accuracy_sample_rate_hz": 16000,
+  "contract_test_sample_rates_hz": [
+    8000,
+    16000
+  ],
+  "test_result": {
+    "run": 59,
+    "skipped": 1,
+    "skip_reason": "Unrelated TEN integration requires separate licensed runtime",
+    "failed": 0
+  },
+  "native_oracle_metadata_source": "../vad-benchmark/results/silero-lite-comparison/raw/silero-lite-0.3.0.json"
+}
