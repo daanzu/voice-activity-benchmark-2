@@ -1138,7 +1138,7 @@ def _(mo):
         uncertain or uncovered time. Development curves explore thresholds;
         holdout plots show already-frozen operating points.
         """),
-    }, expanded=False)
+    })  # Accordions start collapsed, including in older WebAssembly runtimes.
     reading_guide
     return (reading_guide,)
 

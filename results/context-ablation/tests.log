@@ -1,0 +1,66 @@
+test_classic_reset (test_adapters.AdapterTests.test_classic_reset) ... ok
+test_silero_context_reset (test_adapters.AdapterTests.test_silero_context_reset) ... ok
+test_bad_frame_shape_rejected (test_context_ablation.ContextContractTests.test_bad_frame_shape_rejected) ... ok
+test_exact_prefix_contract_and_retained_recurrence_both_rates (test_context_ablation.ContextContractTests.test_exact_prefix_contract_and_retained_recurrence_both_rates) ... ok
+test_real_model_reset_is_exact (test_context_ablation.ContextContractTests.test_real_model_reset_is_exact) ... ok
+test_calibration_only_uses_feasible_development_points (test_context_results.ContextResultTests.test_calibration_only_uses_feasible_development_points) ... ok
+test_latency_matching_matches_shared_evaluator (test_context_results.ContextResultTests.test_latency_matching_matches_shared_evaluator) ... ok
+test_paired_bootstrap_identical_arms_gives_zero_interval (test_context_results.ContextResultTests.test_paired_bootstrap_identical_arms_gives_zero_interval) ... ok
+test_per_stream_totals_conditions_and_thresholds (test_context_results.ContextResultTests.test_per_stream_totals_conditions_and_thresholds) ... ok
+test_report_does_not_claim_missing_optional_oracle (test_context_results.ContextResultTests.test_report_does_not_claim_missing_optional_oracle) ... ok
+test_same_model_runtime_manifest_and_full_clocks (test_context_results.ContextResultTests.test_same_model_runtime_manifest_and_full_clocks) ... ok
+test_three_pass_timing_arithmetic (test_context_results.ContextResultTests.test_three_pass_timing_arithmetic) ... ok
+test_background_is_only_generic_speech (test_dataset.DatasetTests.test_background_is_only_generic_speech) ... ok
+test_intervals_half_open (test_dataset.DatasetTests.test_intervals_half_open) ... ok
+test_manifest_refuses_overwrite (test_dataset.DatasetTests.test_manifest_refuses_overwrite) ... ok
+test_repeatability_and_quiet_labels (test_dataset.DatasetTests.test_repeatability_and_quiet_labels) ... ok
+test_silence_is_not_speech (test_dataset.DatasetTests.test_silence_is_not_speech) ... ok
+test_split_assets_are_disjoint (test_dataset.DatasetTests.test_split_assets_are_disjoint) ... ok
+test_early_notification_remains_signed (test_event_matching.EventMatchingTests.test_early_notification_remains_signed) ... ok
+test_entirely_unknown_activation_is_ambiguous (test_event_matching.EventMatchingTests.test_entirely_unknown_activation_is_ambiguous) ... ok
+test_forced_eof_is_excluded_from_notification_latency (test_event_matching.EventMatchingTests.test_forced_eof_is_excluded_from_notification_latency) ... ok
+test_fragments_are_counted_and_longest_overlap_supplies_latency (test_event_matching.EventMatchingTests.test_fragments_are_counted_and_longest_overlap_supplies_latency) ... ok
+test_global_assignment_can_use_an_alternative_reference (test_event_matching.EventMatchingTests.test_global_assignment_can_use_an_alternative_reference) ... ok
+test_one_long_detection_cannot_recall_multiple_references (test_event_matching.EventMatchingTests.test_one_long_detection_cannot_recall_multiple_references) ... ok
+test_source_clipping_is_distinct_from_premature_notification (test_event_matching.EventMatchingTests.test_source_clipping_is_distinct_from_premature_notification) ... ok
+test_unknown_sliver_does_not_hide_known_negative_activation (test_event_matching.EventMatchingTests.test_unknown_sliver_does_not_hide_known_negative_activation) ... ok
+test_future_independence_and_bounded_cache (test_fsmn.FSMNTests.test_future_independence_and_bounded_cache) ... ok
+test_streaming_matches_batched_canonical_frontend (test_fsmn.FSMNTests.test_streaming_matches_batched_canonical_frontend) ... ok
+test_warmup_reset_and_input (test_fsmn.FSMNTests.test_warmup_reset_and_input) ... ok
+test_endpoint_waits_full_silence (test_metrics.MetricsTests.test_endpoint_waits_full_silence) ... ok
+test_eof_censored (test_metrics.MetricsTests.test_eof_censored) ... ok
+test_never_positive_is_explicit (test_metrics.MetricsTests.test_never_positive_is_explicit) ... ok
+test_perfect_frames (test_metrics.MetricsTests.test_perfect_frames) ... ok
+test_unknown_excluded (test_metrics.MetricsTests.test_unknown_excluded) ... ok
+test_no_future_resampling (test_metrics.StreamingTests.test_no_future_resampling) ... ok
+test_resampling_chunk_independence (test_metrics.StreamingTests.test_resampling_chunk_independence) ... ok
+test_agc2 (test_native.NativeTests.test_agc2) ... ok
+test_pcm_boundaries (test_native.NativeTests.test_pcm_boundaries) ... ok
+test_rnnoise (test_native.NativeTests.test_rnnoise) ... ok
+test_speex (test_native.NativeTests.test_speex) ... warning: The VAD has been replaced by a hack pending a complete rewrite
+warning: The VAD has been replaced by a hack pending a complete rewrite
+ok
+test_ten (test_native.NativeTests.test_ten) ... skipped 'TEN requires a separately obtained and licensed library'
+test_measurements (test_results.RecordedResults.test_measurements) ... ok
+test_scripts_parse (test_results.RecordedResults.test_scripts_parse) ... ok
+test_exact_original_dataset_and_complete_runs (test_silero_comparison_results.SileroComparisonResults.test_exact_original_dataset_and_complete_runs) ... ok
+test_packages_and_equivalent_model_provenance (test_silero_comparison_results.SileroComparisonResults.test_packages_and_equivalent_model_provenance) ... ok
+test_paired_comparison_uses_all_frames_and_identical_clocks (test_silero_comparison_results.SileroComparisonResults.test_paired_comparison_uses_all_frames_and_identical_clocks) ... ok
+test_unchanged_development_protocol_and_timing_arithmetic (test_silero_comparison_results.SileroComparisonResults.test_unchanged_development_protocol_and_timing_arithmetic) ... ok
+test_bad_audio_is_rejected_before_native_call (test_silero_lite.AudioContractTests.test_bad_audio_is_rejected_before_native_call) ... ok
+test_foreign_existing_import_fails_closed (test_silero_lite.AudioContractTests.test_foreign_existing_import_fails_closed) ... ok
+test_fresh_float32_frame_without_double_context (test_silero_lite.AudioContractTests.test_fresh_float32_frame_without_double_context) ... ok
+test_native_reset_and_probability_validation (test_silero_lite.AudioContractTests.test_native_reset_and_probability_validation) ... ok
+test_read_only_noncontiguous_and_float64_are_normalized_to_buffer_contract (test_silero_lite.AudioContractTests.test_read_only_noncontiguous_and_float64_are_normalized_to_buffer_contract) ... ok
+test_unpinned_version_and_same_process_conflict_fail_closed (test_silero_lite.AudioContractTests.test_unpinned_version_and_same_process_conflict_fail_closed) ... ok
+test_changed_model_library_or_wrapper_is_rejected (test_silero_lite.IntegrityTests.test_changed_model_library_or_wrapper_is_rejected) ... ok
+test_changed_wheel_is_rejected (test_silero_lite.IntegrityTests.test_changed_wheel_is_rejected) ... ok
+test_verified_metadata_and_missing_setup (test_silero_lite.IntegrityTests.test_verified_metadata_and_missing_setup) ... ok
+test_wrong_distribution_version_is_rejected (test_silero_lite.IntegrityTests.test_wrong_distribution_version_is_rejected) ... ok
+test_native_0_3_0 (test_silero_lite.NativeWheelTests.test_native_0_3_0) ... ok
+test_native_0_4_0 (test_silero_lite.NativeWheelTests.test_native_0_4_0) ... ok
+
+----------------------------------------------------------------------
+Ran 59 tests in 2.550s
+
+OK (skipped=1)
