@@ -10,6 +10,8 @@ The common-interface seven-backend extension is documented in [docs/RUN_SYNTHETI
 
 The [published Silero package comparison](results/silero-lite-comparison/REPORT.md) adds actual `silero-vad-lite` **0.3.0 and 0.4.0** native wheels and reruns all seven previous backends on the identical corpus. See [package isolation, model provenance, and reproduction](docs/SILERO_LITE.md). Both new releases already include the context/reset correction; 0.4.0's model is byte-identical to the existing direct-ONNX baseline.
 
+The [v5.1 context-only ablation](results/context-ablation/REPORT.md) isolates that correction using the same model, runtime, labeled corpus and controller, with the 64-sample preceding waveform prefix omitted versus enabled. At a fixed 0.5 threshold, synthetic holdout missed speech falls from 31.36% to 7.30%; strict development-calibrated results, paired uncertainty, boundary metrics and three timing passes are also reported. The missing-context arm emulates the old input/state contract; it does not execute the old 0.2.1 native wheel. See the [independent validation](results/context-ablation/INDEPENDENT_REVIEW.md). These results do not establish real-microphone generalization.
+
 ## Contents
 
 - [REPORT.md](REPORT.md): full comparison, source references, measured results, and limitations

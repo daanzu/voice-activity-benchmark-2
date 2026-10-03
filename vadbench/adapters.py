@@ -58,6 +58,9 @@ class SileroAdapter:
         return float(probability[0, 0])
 
 def create(name):
+    if name in ('context-enabled', 'context-disabled'):
+        from .context_ablation import BACKENDS, ContextAblationAdapter
+        return ContextAblationAdapter(BACKENDS[name])
     if name == 'classic':
         return ClassicAdapter()
     if name.startswith('classic-'):
