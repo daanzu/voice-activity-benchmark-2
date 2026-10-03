@@ -12,6 +12,10 @@ The [published Silero package comparison](results/silero-lite-comparison/REPORT.
 
 The [v5.1 context-only ablation](results/context-ablation/REPORT.md) isolates that correction using the same model, runtime, labeled corpus and controller, with the 64-sample preceding waveform prefix omitted versus enabled. At a fixed 0.5 threshold, synthetic holdout missed speech falls from 31.36% to 7.30%; strict development-calibrated results, paired uncertainty, boundary metrics and three timing passes are also reported. The missing-context arm emulates the old input/state contract; it does not execute the old 0.2.1 native wheel. See the [independent validation](results/context-ablation/INDEPENDENT_REVIEW.md). These results do not establish real-microphone generalization.
 
+## Interactive comparisons
+
+Use the [marimo notebook](notebooks/README.md) to compare a smaller detector subset with searchable selection, presets, stable colors, exact-value tooltips, and zoomable development/holdout/performance graphs. It reads saved results only; no benchmark rerun is needed. [Open the interactive browser preview](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm?mode=read&show-code=false). GitHub's ordinary file view is static; this link runs the notebook in your browser.
+
 ## Contents
 
 - [REPORT.md](REPORT.md): full comparison, source references, measured results, and limitations
