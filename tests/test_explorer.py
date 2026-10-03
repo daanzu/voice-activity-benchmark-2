@@ -66,6 +66,14 @@ class ExplorerPlotTests(unittest.TestCase):
     def figure(self, names, kind="dev_roc", metric="missed_speech_fraction", **kw):
         return self.defs["make_figure"](self.data, names, kind, metric, **kw)
 
+    def test_reading_guide_is_collapsed_and_distinguishes_metrics(self):
+        guide = self.defs["reading_guide"].text
+        self.assertIn("data-expanded='[]'", guide)
+        for explanation in ("How to read these graphs", "95 of 100 seconds", "2 of 100 seconds",
+                            "upper left", "Event recall is different", "one-to-one",
+                            "False activations per negative hour", "already-frozen"):
+            self.assertIn(explanation, guide)
+
     def test_default_is_small_and_colors_stable(self):
         self.assertEqual(len(self.defs["detectors"].value), 3)
         one, _, _ = self.figure(["ten"])

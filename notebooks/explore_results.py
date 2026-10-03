@@ -1109,6 +1109,41 @@ def _(mo):
 
 
 @app.cell(hide_code=True)
+def _(mo):
+    reading_guide = mo.accordion({
+        "How to read these graphs": mo.md("""
+        - **Speech recall** is the share of evaluated speech time caught: detecting
+          95 of 100 seconds gives 95% recall (5% missed speech). Low recall means
+          more speech is missed, potentially cutting words.
+        - **False-positive fraction** is the share of evaluated non-speech time
+          incorrectly flagged as speech: 2 of 100 seconds gives 2%. Higher values
+          mean more noise or silence is treated as speech.
+        - **Threshold tradeoff:** lowering the score threshold usually increases
+          both speech recall and false-positive fraction. On the recall-versus-
+          false-positive graph, aim toward the **upper left**: catch more speech
+          with fewer false positives. On missed-speech-versus-false-activation
+          plots, both axes should be lower. Zero false positives alone can mean
+          a detector misses everything.
+        - **Event recall is different:** it counts reference events (speech
+          segments merged across gaps of ≤200 ms) matched one-to-one to overlapping
+          detections, largest overlaps first. A short overlap can count; one long
+          detection cannot match several references. It does not measure captured
+          speech duration.
+          **False activations per negative hour** counts unmatched detector
+          segments with no reference-speech overlap and some evaluated non-speech
+          support, divided by evaluated non-speech hours. It is not the frame
+          false-positive percentage.
+
+        Frame percentages use the benchmark's scored 10 ms intervals, excluding
+        uncertain or uncovered time. Development curves explore thresholds;
+        holdout plots show already-frozen operating points.
+        """),
+    }, expanded=False)
+    reading_guide
+    return (reading_guide,)
+
+
+@app.cell(hide_code=True)
 def _(mo, result_sets):
     result_set = mo.ui.dropdown(
         options={v["label"]: k for k, v in result_sets.items()},
