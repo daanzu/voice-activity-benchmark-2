@@ -10,6 +10,10 @@ The common-interface seven-backend extension is documented in [docs/RUN_SYNTHETI
 
 The [published Silero package comparison](results/silero-lite-comparison/REPORT.md) adds actual `silero-vad-lite` **0.3.0 and 0.4.0** native wheels and reruns all seven previous backends on the identical corpus. See [package isolation, model provenance, and reproduction](docs/SILERO_LITE.md). Both new releases already include the context/reset correction; 0.4.0's model is byte-identical to the existing direct-ONNX baseline.
 
+## Interactive comparisons
+
+Use the [marimo notebook](notebooks/README.md) to compare a smaller detector subset with searchable selection, presets, stable colors, exact-value tooltips, and zoomable development/holdout/performance graphs. It reads saved results only; no benchmark rerun is needed. [Open the interactive browser preview](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm). GitHub's ordinary file view is static; this link runs the notebook in your browser.
+
 ## Contents
 
 - [REPORT.md](REPORT.md): full comparison, source references, measured results, and limitations
