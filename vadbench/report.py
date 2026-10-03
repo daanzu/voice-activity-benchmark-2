@@ -14,13 +14,16 @@ def main():
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
     manifest=json.loads(args.manifest.read_text());records=manifest['records']
     dev=[r for r in records if r['split']=='dev'];test=[r for r in records if r['split']=='test']
-    results=[];curves={};blocked=[]
+    results=[];curves={};blocked=[];runs={};silero_traces={}
     for path in sorted(args.raw.glob('*.json')):
         raw=json.loads(path.read_text());name=raw['backend']
+        runs[name]=raw
         if raw['status']!='ok':blocked.append(raw);continue
         expected=hashlib.sha256(args.manifest.read_bytes()).hexdigest()
         if raw['manifest_sha256']!=expected:raise ValueError(f'Manifest changed since run: {name}')
         with np.load(path.with_suffix('.npz')) as loaded:traces={k:loaded[k] for k in loaded.files}
+        if name=='silero' or name.startswith('silero-lite-'):
+            silero_traces[name]=traces
         selected,curve=calibrate(dev,traces)
         curves[name]=curve
         holdout=evaluate(test,traces,selected['threshold'])
@@ -41,14 +44,32 @@ def main():
     classic=[r for r in results if r['backend'].startswith('classic-')]
     selected_classic=min(classic,key=lambda r:(r['dev']['missed_speech_fraction'],r['dev']['false_positive_fraction'])) if classic else None
     included=[r for r in results if not r['backend'].startswith('classic-') or r is selected_classic]
-    summary=dict(schema_version=1,evaluation_source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')},manifest_sha256=hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
+    comparisons=[]
+    for left,right in [('silero','silero-lite-0.4.0'),('silero-lite-0.3.0','silero-lite-0.4.0')]:
+        if left not in silero_traces or right not in silero_traces:continue
+        differences=[]
+        for record in records:
+            a=silero_traces[left][record['id']];b=silero_traces[right][record['id']]
+            if a.shape!=b.shape or not np.array_equal(a[:,[0,1,3]],b[:,[0,1,3]]):
+                raise ValueError(f'Silero trace clocks differ: {left}, {right}, {record["id"]}')
+            differences.append(np.abs(a[:,2]-b[:,2]))
+        difference=np.concatenate(differences)
+        comparisons.append(dict(left=left,right=right,frames=len(difference),identical_clocks=True,
+            model_hash_equal=runs[left]['adapter']['model_sha256']==runs[right]['adapter']['model_sha256'],
+            maximum_absolute_score_difference=float(difference.max()),
+            mean_absolute_score_difference=float(difference.mean()),
+            exactly_equal_scores=int(np.count_nonzero(difference==0)),
+            scores_differing_by_more_than_1e_6=int(np.count_nonzero(difference>1e-6))))
+    summary=dict(schema_version=2,evaluation_source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in Path(__file__).parent.glob('*.py')},manifest_sha256=hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
                  dataset=dict(streams=len(records),hours=sum(r['duration_s'] for r in records)/3600,
                      split_counts=dict(Counter(r['split'] for r in records)),generation=manifest.get('generation')),
                  calibration=dict(split='dev',false_activations_per_negative_hour_budget=5,
                      false_positive_fraction_cap=.01,threshold_grid=THRESHOLDS.tolist(),
                      selected_classic=selected_classic['backend'] if selected_classic else None),
-                 results=included,reference_points={r['backend']:r['reference_point'] for r in results},all_development_choices={r['backend']:r['dev'] for r in results},blocked=blocked)
+                 results=included,reference_points={r['backend']:r['reference_point'] for r in results},all_development_choices={r['backend']:r['dev'] for r in results},blocked=blocked,
+                 paired_silero_score_comparisons=comparisons)
     (args.output/'summary.json').write_text(json.dumps(summary,indent=2))
+    (args.output/'runs.json').write_text(json.dumps(runs,separators=(',',':'))+'\n')
     (args.output/'development-curves.json').write_text(json.dumps({name:[{k:r[k] for k in ('threshold','missed_speech_fraction','false_positive_fraction','false_activations','negative_hours','false_activations_per_negative_hour','tp','fp','fn','tn','fragmentation_events')} for r in curve] for name,curve in curves.items()},separators=(',',':'))+'\n')
     # Copy exact immutable manifest as provenance; WAV files remain generated assets.
     (args.output/'dataset-manifest.json').write_bytes(args.manifest.read_bytes())
@@ -57,8 +78,8 @@ def main():
     import matplotlib.pyplot as plt
     plt.rcParams['svg.fonttype']='none';plt.rcParams['svg.hashsalt']='vadbench-20261002'
     fig,axes=plt.subplots(1,2,figsize=(12,4.5))
-    for name,curve in curves.items():
-        axes[0].plot([r['false_positive_fraction'] for r in curve],[1-r['missed_speech_fraction'] for r in curve],label=name,marker='x' if name.startswith('classic-') else '.',ms=6 if name.startswith('classic-') else 3,linestyle='None' if name.startswith('classic-') else '-')
+    for index,(name,curve) in enumerate(curves.items()):
+        axes[0].plot([r['false_positive_fraction'] for r in curve],[1-r['missed_speech_fraction'] for r in curve],label=name,color=plt.get_cmap('tab20')(index),marker='x' if name.startswith('classic-') else '.',ms=6 if name.startswith('classic-') else 3,linestyle='None' if name.startswith('classic-') else '-')
     axes[0].set(xlabel='Non-speech false-positive fraction (dev)',ylabel='Speech recall (dev)',title='Development curves (binary modes: points only)',xlim=(0,1),ylim=(0,1));axes[0].legend(fontsize=8)
     labels=[r['backend'] for r in included]
     axes[1].barh(labels,[r['test']['missed_speech_fraction'] for r in included]);axes[1].set(xlabel='Missed speech fraction (holdout)',title='Dev-selected thresholds, fixed synthetic holdout',xlim=(0,1))
@@ -77,7 +98,22 @@ def main():
         'Thresholds and classic aggressiveness are selected only on development data: minimize missed speech subject to at most 5 unmatched activations per negative-audio hour AND at most 1% non-speech frame false positives. The shared grid is dense in the high-probability tail (0.99 through 0.9999 in 0.0001 steps), includes finer near-one values and a never-positive threshold. Its exact values are in summary.json. A source/metrics audit identified that the initial coarse grid skipped feasible development points; this common dev-only grid corrects that issue without selecting thresholds from holdout. This can select an unusable all-miss detector; no feasible useful operating point is a result, not a reason to retune on holdout. Constraints need not transfer to holdout.','',
         '| Backend | Threshold | Holdout miss % | Holdout false-positive % | False events/negative hour | Event recall % | Extra fragments |','|---|---:|---:|---:|---:|---:|---:|']
     for r in included:
-        m=r['test'];lines.append(f"| {r['backend']} | {f(m['threshold'])} | {f(m['missed_speech_fraction'],100)} | {f(m['false_positive_fraction'],100)} | {f(m['false_activations_per_negative_hour'])} | {f(m['event_recall'],100)} | {m['fragmentation_events']} |")
+        m=r['test'];lines.append(f"| {r['backend']} | {m['threshold']:.7g} | {f(m['missed_speech_fraction'],100)} | {f(m['false_positive_fraction'],100)} | {f(m['false_activations_per_negative_hour'])} | {f(m['event_recall'],100)} | {m['fragmentation_events']} |")
+    lite=[r for r in included if r['backend'].startswith('silero-lite-')]
+    if lite:
+        lines += ['', '## Published Silero packages', '',
+            'The two lite rows execute the actual pinned PyPI CPython 3.12 Linux x86-64 wheels through their public `SileroVAD.process` API. Each version is installed in a separate private target and loaded in a fresh process; neither model is substituted into the direct-ONNX baseline. Context and recurrent state are managed by the package, and the common runner resets each independent stream.', '',
+            'Both 0.3.0 and 0.4.0 already have the corrected 4 ms waveform context and reset behavior. This is **not** a context-fix accuracy experiment. Their native library is byte-identical on the tested platform; the bundled model changes from v5.1 to v6.2 (upstream v6.2.3 release). The 0.4.0 model is byte-identical to the existing direct-ONNX `silero` baseline. Thus 0.3.0 versus 0.4.0 compares the weight/model update, while 0.4.0 versus `silero` compares native wrapper/runtime execution of the same model.', '',
+            '| Package row | Upstream model | Model SHA-256 | Native library SHA-256 |',
+            '|---|---|---|---|']
+        for r in lite:
+            a=r['adapter'];lines.append(f"| {r['backend']} | {a.get('model_version','see adapter metadata')} | `{a['model_sha256']}` | `{a.get('library_sha256','see adapter metadata')}` |")
+        lines += ['', 'Paired scores use identical waveform streams, frame clocks, resets, and acquisition timestamps. Model equivalence alone does not imply bitwise runtime equivalence; observed differences are recorded below.', '',
+            '| Pair | Frames | Max absolute score difference | Mean absolute difference | Scores differing by >1e-6 |',
+            '|---|---:|---:|---:|---:|']
+        for c in comparisons:
+            lines.append(f"| {c['left']} / {c['right']} | {c['frames']} | {c['maximum_absolute_score_difference']:.9g} | {c['mean_absolute_score_difference']:.9g} | {c['scores_differing_by_more_than_1e_6']} |")
+        lines += ['', 'Full wheel URL/hash, package version, model/native-library hashes, runtime and source provenance are retained in `summary.json` and `runs.json`. See [setup and provenance](../../docs/SILERO_LITE.md). Timings include the package API and adapter conversion/validation overhead; they do not isolate ONNX kernels. Startup is construction plus integrity verification, excluding Python process launch.', '']
     lines += ['', '## Reference points and tradeoffs', '',
         'The severe calibrated budget above is only one operating point. The following fixed reference points were not optimized on holdout: 0.5 for most probability/binary scores, 0.35 for Speex’s documented entry probability, and 0.8 for FSMN’s approximate raw-posterior equivalent of its speech/noise margin. These are **not complete vendor-default detectors**: the common 200 ms endpoint policy replaces package-specific gates, hysteresis and segmentation. In particular, FSMN’s native energy gate is absent. Classic mode 2 is shown as the normal reference, independent of the calibrated mode choice.', '',
         '| Backend | Reference threshold | Holdout miss % | False-positive % | False events / negative hour |',
@@ -112,6 +148,10 @@ def main():
         '- Historical results and REPORT.md remain unchanged. Machine-readable full metrics, adapter pins, provenance, blocked status, and calibration curves are adjacent.','']
     if blocked:
         lines+=['## Blocked backends','']+[f"- {r['backend']}: {r['error']}" for r in blocked]
-    (args.output/'REPORT.md').write_text('\n'.join(lines)+'\n')
+    (args.output/'REPORT.md').write_text('\n'.join(lines).rstrip()+'\n')
+    # Matplotlib emits trailing spaces in SVG path data; keep generated diffs clean.
+    for name in ('accuracy.svg','performance.svg'):
+        path=args.output/name
+        path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
     print(json.dumps({'completed':[r['backend'] for r in included],'blocked':[r['backend'] for r in blocked],'output':str(args.output)},indent=2))
 if __name__=='__main__':main()

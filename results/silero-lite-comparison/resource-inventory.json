@@ -1,0 +1,45 @@
+{
+  "artifacts": {
+    "silero_model": {
+      "bytes": 2327524,
+      "sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3"
+    },
+    "fsmn_model": {
+      "bytes": 1730426,
+      "sha256": "756887ce01695a9bb00dd85ca0f743653de03b18ba54d2e9ef4f4bb9b3edbf9f"
+    },
+    "rnnoise_native": {
+      "bytes": 14848904,
+      "sha256": "c6689682b34ced7eeec93d406a755f3d26a6b5bf0c42b3ef24396b71bc26e923"
+    },
+    "agc2_native": {
+      "bytes": 238664,
+      "sha256": "e12a6aa66058466db44856b74a2e55ae0711b75849b88f95b72045216c589b95"
+    },
+    "speex_native": {
+      "bytes": 108184,
+      "sha256": "8b50638de8725f8b54284382c54e138475507239ffb69069375627e22436c1d9"
+    },
+    "ten_native": {
+      "bytes": 313240,
+      "sha256": "5abfe6bf6e9a4fcea6b440240f0a9a0f431ab5006e48a4e16465ebe681ffd90f"
+    },
+    "silero_lite_0.3.0_installed": {
+      "installed_tree_bytes": 25478935,
+      "note": "Includes all installed package files, not compressed download size"
+    },
+    "silero_lite_0.4.0_installed": {
+      "installed_tree_bytes": 25480515,
+      "note": "Includes all installed package files, not compressed download size"
+    },
+    "classic_native": {
+      "bytes": 189376,
+      "sha256": "3d0609904d17992c73f3f90d10fd8f170f1907f2da1fdc70edb285c7268aef76"
+    },
+    "onnxruntime_package": {
+      "installed_tree_bytes": 40544272,
+      "note": "Includes all installed package files, not compressed download size"
+    }
+  },
+  "note": "Artifact sizes only; excludes dependency closure except separately named package. Never interpret as RAM."
+}

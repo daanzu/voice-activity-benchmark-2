@@ -10,17 +10,23 @@ python3.12 -m venv .venv
 python scripts/setup_primary.py
 python scripts/setup_native.py
 python scripts/setup_fsmn.py
+python scripts/setup_silero_lite.py
 ```
 
 Review [native backend setup](NATIVE_BACKENDS.md) for compiler and TEN details. TEN requires separately accepting its additional license restrictions and providing its library; it is not silently downloaded or redistributed. Other model assets and native dependencies remain under ignored `.deps/`. Review [FSMN](FSMN_BACKEND.md) for exact frontend and raw-score semantics.
+
+The default runner now includes both published `silero-vad-lite` versions, in separate processes. See [the nine-backend comparison instructions](SILERO_LITE.md) for the separate output directory that preserves the original seven-backend results. On Python builds configured for an unavailable compiler, set `CC=gcc CXX=g++` when running `setup_primary.py`.
 
 ## Generate and evaluate
 
 ```sh
 python -m vadbench.dataset --output data/synthetic --seed 20261002 --count 240
-OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python -m vadbench.run --manifest data/synthetic/manifest.json
-python -m vadbench.report --manifest data/synthetic/manifest.json
-python scripts/resource_inventory.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python -m vadbench.run \
+  --manifest data/synthetic/manifest.json --output results/silero-lite-comparison/raw
+python -m vadbench.report --manifest data/synthetic/manifest.json \
+  --raw results/silero-lite-comparison/raw --output results/silero-lite-comparison
+python scripts/resource_inventory.py \
+  --output results/silero-lite-comparison/resource-inventory.json
 python -m unittest discover -s tests -v
 ```
 
@@ -28,7 +34,7 @@ Generation refuses to overwrite an existing manifest. Preserve the seed, exact s
 
 The runner launches each backend in a fresh sequential process. WAV input is read outside measured streaming processing. Every independent stream resets detector and resampler. Ten-millisecond capture blocks pass through a causal stateful FIR resampler if required. FIR interpolation overshoot is clipped to normalized [-1,1] and clipped sample counts are retained in each run. Native frame sizes are preserved; no incomplete final frame is padded. Scores retain source-aligned intervals and separate acquisition-time emissions. The benchmark is not an audio-device loop.
 
-The reporter calibrates thresholds and classic WebRTC aggressiveness only on development data, then evaluates holdout without tuning. It writes `results/synthetic/summary.json`, development curves, exact dataset manifest, SVG plots, and `REPORT.md`. Large WAVs and compressed raw score traces stay ignored and are regenerated locally. A backend initialization failure is recorded as blocked, never a made-up measurement.
+The reporter calibrates thresholds and classic WebRTC aggressiveness only on development data, then evaluates holdout without tuning. The explicit output paths above write `results/silero-lite-comparison/summary.json`, development curves, exact dataset manifest, SVG plots, and `REPORT.md`, preserving the recorded original seven-backend results. Keep these explicit paths: the scripts' legacy default output remains `results/synthetic`. Large WAVs and compressed raw score traces stay ignored and are regenerated locally. A backend initialization failure is recorded as blocked, never a made-up measurement.
 
 ## Read the results correctly
 

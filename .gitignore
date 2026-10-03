@@ -9,4 +9,5 @@ results/local/
 .deps/
 data/
 results/synthetic/raw/
+results/silero-lite-comparison/raw/
 *.wav
