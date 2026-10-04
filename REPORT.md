@@ -2,6 +2,8 @@
 
 Research and limited measurements, 2026-10-02.
 
+> **Historical scope:** the measurement claims below describe the original throughput study, before the synthetic extensions. For what is tested now, see the [backend overview](docs/BACKENDS.md), [nine-backend synthetic results](results/silero-lite-comparison/REPORT.md), and [context-only ablation](results/context-ablation/REPORT.md). The original observations and numbers below are retained.
+
 ## Executive summary
 
 Keep classic WebRTC VAD when compatibility, tiny footprint, and minimum CPU are the primary requirements. For a modern speech detector, compare a correctly integrated current Silero model with WebRTC's compact AGC2 RNN VAD on the actual target workload. TEN and FSMN are worthwhile additional candidates. RNNoise is most relevant when denoising is also required; Speex is primarily a legacy integration option.
