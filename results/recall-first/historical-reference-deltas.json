@@ -1,0 +1,414 @@
+{
+  "baseline": "results/silero-lite-comparison/summary.json at 5bf4ae0",
+  "purpose": "Aggregate fixed-reference check; not bitwise score comparison",
+  "comparisons": [
+    {
+      "backend": "classic-0",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 60527,
+        "fp": 86840,
+        "fn": 4,
+        "tn": 116955,
+        "missed_speech_fraction": 6.608184236176505e-05,
+        "false_positive_fraction": 0.4261144777840477,
+        "false_activations": 399,
+        "false_activations_per_negative_hour": 704.8259280158983
+      },
+      "current": {
+        "tp": 60527,
+        "fp": 86840,
+        "fn": 4,
+        "tn": 116955,
+        "missed_speech_fraction": 6.608184236176505e-05,
+        "false_positive_fraction": 0.4261144777840477,
+        "false_activations": 399,
+        "false_activations_per_negative_hour": 704.8259280158983
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "classic-1",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 60518,
+        "fp": 84894,
+        "fn": 13,
+        "tn": 118901,
+        "missed_speech_fraction": 0.0002147659876757364,
+        "false_positive_fraction": 0.41656566647856913,
+        "false_activations": 397,
+        "false_activations_per_negative_hour": 701.2929659707058
+      },
+      "current": {
+        "tp": 60518,
+        "fp": 84894,
+        "fn": 13,
+        "tn": 118901,
+        "missed_speech_fraction": 0.0002147659876757364,
+        "false_positive_fraction": 0.41656566647856913,
+        "false_activations": 397,
+        "false_activations_per_negative_hour": 701.2929659707058
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 60448,
+        "fp": 80026,
+        "fn": 83,
+        "tn": 123769,
+        "missed_speech_fraction": 0.0013711982290066248,
+        "false_positive_fraction": 0.3926789175396845,
+        "false_activations": 486,
+        "false_activations_per_negative_hour": 858.5097769817709
+      },
+      "current": {
+        "tp": 60448,
+        "fp": 80026,
+        "fn": 83,
+        "tn": 123769,
+        "missed_speech_fraction": 0.0013711982290066248,
+        "false_positive_fraction": 0.3926789175396845,
+        "false_activations": 486,
+        "false_activations_per_negative_hour": 858.5097769817709
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "classic-3",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 58709,
+        "fp": 70557,
+        "fn": 1822,
+        "tn": 133238,
+        "missed_speech_fraction": 0.03010027919578398,
+        "false_positive_fraction": 0.346215559753674,
+        "false_activations": 608,
+        "false_activations_per_negative_hour": 1074.0204617385116
+      },
+      "current": {
+        "tp": 58709,
+        "fp": 70557,
+        "fn": 1822,
+        "tn": 133238,
+        "missed_speech_fraction": 0.03010027919578398,
+        "false_positive_fraction": 0.346215559753674,
+        "false_activations": 608,
+        "false_activations_per_negative_hour": 1074.0204617385116
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 57475,
+        "fp": 103,
+        "fn": 3056,
+        "tn": 203692,
+        "missed_speech_fraction": 0.0504865275643885,
+        "false_positive_fraction": 0.000505409848131701,
+        "false_activations": 18,
+        "false_activations_per_negative_hour": 31.796658406732252
+      },
+      "current": {
+        "tp": 57475,
+        "fp": 103,
+        "fn": 3056,
+        "tn": 203692,
+        "missed_speech_fraction": 0.0504865275643885,
+        "false_positive_fraction": 0.000505409848131701,
+        "false_activations": 18,
+        "false_activations_per_negative_hour": 31.796658406732252
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 56110,
+        "fp": 703,
+        "fn": 4421,
+        "tn": 203092,
+        "missed_speech_fraction": 0.07303695627034082,
+        "false_positive_fraction": 0.003449544885792095,
+        "false_activations": 70,
+        "false_activations_per_negative_hour": 123.65367158173655
+      },
+      "current": {
+        "tp": 56110,
+        "fp": 703,
+        "fn": 4421,
+        "tn": 203092,
+        "missed_speech_fraction": 0.07303695627034082,
+        "false_positive_fraction": 0.003449544885792095,
+        "false_activations": 70,
+        "false_activations_per_negative_hour": 123.65367158173655
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 57475,
+        "fp": 103,
+        "fn": 3056,
+        "tn": 203692,
+        "missed_speech_fraction": 0.0504865275643885,
+        "false_positive_fraction": 0.000505409848131701,
+        "false_activations": 18,
+        "false_activations_per_negative_hour": 31.796658406732252
+      },
+      "current": {
+        "tp": 57475,
+        "fp": 103,
+        "fn": 3056,
+        "tn": 203692,
+        "missed_speech_fraction": 0.0504865275643885,
+        "false_positive_fraction": 0.000505409848131701,
+        "false_activations": 18,
+        "false_activations_per_negative_hour": 31.796658406732252
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "agc2",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 54031,
+        "fp": 31559,
+        "fn": 6500,
+        "tn": 172236,
+        "missed_speech_fraction": 0.1073829938378682,
+        "false_positive_fraction": 0.1548565960892073,
+        "false_activations": 799,
+        "false_activations_per_negative_hour": 1411.4183370543929
+      },
+      "current": {
+        "tp": 54031,
+        "fp": 31559,
+        "fn": 6500,
+        "tn": 172236,
+        "missed_speech_fraction": 0.1073829938378682,
+        "false_positive_fraction": 0.1548565960892073,
+        "false_activations": 799,
+        "false_activations_per_negative_hour": 1411.4183370543929
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "ten",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 56731,
+        "fp": 4214,
+        "fn": 3800,
+        "tn": 199581,
+        "missed_speech_fraction": 0.0627777502436768,
+        "false_positive_fraction": 0.020677641747834832,
+        "false_activations": 440,
+        "false_activations_per_negative_hour": 777.251649942344
+      },
+      "current": {
+        "tp": 56731,
+        "fp": 4214,
+        "fn": 3800,
+        "tn": 199581,
+        "missed_speech_fraction": 0.0627777502436768,
+        "false_positive_fraction": 0.020677641747834832,
+        "false_activations": 440,
+        "false_activations_per_negative_hour": 777.251649942344
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "threshold": 0.8,
+      "historical": {
+        "tp": 57207,
+        "fp": 23749,
+        "fn": 3324,
+        "tn": 179470,
+        "missed_speech_fraction": 0.05491401100262675,
+        "false_positive_fraction": 0.11686407274910318,
+        "false_activations": 186,
+        "false_activations_per_negative_hour": 329.4967498117794
+      },
+      "current": {
+        "tp": 57207,
+        "fp": 23749,
+        "fn": 3324,
+        "tn": 179470,
+        "missed_speech_fraction": 0.05491401100262675,
+        "false_positive_fraction": 0.11686407274910318,
+        "false_activations": 186,
+        "false_activations_per_negative_hour": 329.4967498117794
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "threshold": 0.5,
+      "historical": {
+        "tp": 60029,
+        "fp": 7139,
+        "fn": 502,
+        "tn": 196656,
+        "missed_speech_fraction": 0.008293271216401513,
+        "false_positive_fraction": 0.03503030005642926,
+        "false_activations": 274,
+        "false_activations_per_negative_hour": 484.0158001913687
+      },
+      "current": {
+        "tp": 60028,
+        "fp": 7086,
+        "fn": 503,
+        "tn": 196709,
+        "missed_speech_fraction": 0.008309791676991954,
+        "false_positive_fraction": 0.034770234794769254,
+        "false_activations": 273,
+        "false_activations_per_negative_hour": 482.2493191687725
+      },
+      "delta": {
+        "tp": -1,
+        "fp": -53,
+        "fn": 1,
+        "tn": 53,
+        "missed_speech_fraction": 1.6520460590441557e-05,
+        "false_positive_fraction": -0.000260065261660003,
+        "false_activations": -1,
+        "false_activations_per_negative_hour": -1.7664810225962242
+      }
+    },
+    {
+      "backend": "speex",
+      "threshold": 0.35,
+      "historical": {
+        "tp": 60432,
+        "fp": 86929,
+        "fn": 99,
+        "tn": 116866,
+        "missed_speech_fraction": 0.001635525598453685,
+        "false_positive_fraction": 0.4265511911479673,
+        "false_activations": 369,
+        "false_activations_per_negative_hour": 651.8314973380112
+      },
+      "current": {
+        "tp": 60432,
+        "fp": 86929,
+        "fn": 99,
+        "tn": 116866,
+        "missed_speech_fraction": 0.001635525598453685,
+        "false_positive_fraction": 0.4265511911479673,
+        "false_activations": 369,
+        "false_activations_per_negative_hour": 651.8314973380112
+      },
+      "delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "missed_speech_fraction": 0.0,
+        "false_positive_fraction": 0.0,
+        "false_activations": 0,
+        "false_activations_per_negative_hour": 0.0
+      }
+    }
+  ]
+}

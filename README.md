@@ -4,6 +4,10 @@ A reproducible, **limited CPU-throughput experiment** for classic WebRTC VAD and
 
 This is not a seven-backend accuracy benchmark. Only classic WebRTC and direct Silero ONNX inference were timed. No real-world VAD accuracy, boundary accuracy, power consumption, or end-to-end application latency was measured.
 
+## Recall-first tradeoffs
+
+The [recall-first analysis](results/recall-first/FINDINGS.md) adds 99%, 99.5%, and 99.9% speech-frame recall targets and comparisons against all four classic WebRTC modes. Thresholds minimize development false-positive duration, then stay frozen on holdout; actual holdout recall and false-event costs are reported separately. The [interactive explorer](notebooks/README.md) includes the expanded near-zero sweep and target controls. See the [protocol and reproduction guide](docs/RECALL_FIRST.md).
+
 ## New synthetic streaming evaluation
 
 The common-interface seven-backend extension is documented in [docs/RUN_SYNTHETIC.md](docs/RUN_SYNTHETIC.md). It generates 80 minutes of split-disjoint synthetic scenarios with known source placement, explicit activity-label uncertainty, development-only calibration, and a held-out evaluation. See [the synthetic results](results/synthetic/REPORT.md). Historical measurements below remain unchanged.
@@ -14,7 +18,7 @@ The [v5.1 context-only ablation](results/context-ablation/REPORT.md) isolates th
 
 ## Interactive comparisons
 
-Use the [marimo notebook](notebooks/README.md) to compare a smaller detector subset with searchable selection, presets, stable colors, exact-value tooltips, and zoomable development/holdout/performance graphs. It reads saved results only; no benchmark rerun is needed. [Open the interactive browser preview](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/interactive-marimo-explorer/notebooks/explore_results.py/wasm?mode=read&show-code=false). GitHub's ordinary file view is static; this link runs the notebook in your browser.
+Use the [marimo notebook](notebooks/README.md) to compare a smaller detector subset with searchable selection, presets, stable colors, exact-value tooltips, and zoomable development/holdout/performance graphs. It reads saved results only; no benchmark rerun is needed. [Open the interactive browser preview](https://molab.marimo.io/github/daanzu/voice-activity-benchmark-2/blob/recall-first-tradeoffs/notebooks/explore_results.py/wasm?mode=read&show-code=false). GitHub's ordinary file view is static; this link runs the notebook in your browser.
 
 ## Contents
 

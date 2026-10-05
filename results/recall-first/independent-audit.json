@@ -1,0 +1,230 @@
+{
+  "status": "passed",
+  "checks": {
+    "comparisons": 17946,
+    "choices": 84,
+    "feasible_choices": 72,
+    "unique_metric_points": 168,
+    "raw_traces": 2880
+  },
+  "differences": [],
+  "coverage": {
+    "classic-0": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "classic-1": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "classic-2": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "classic-3": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "silero": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "silero-lite-0.3.0": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "silero-lite-0.4.0": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "agc2": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "ten": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "fsmn": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 138790,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 384
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203219,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 576
+      }
+    },
+    "rnnoise": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    },
+    "speex": {
+      "dev": {
+        "total_frames": 192000,
+        "known_speech_frames": 37187,
+        "known_negative_frames": 139174,
+        "uncertain_frames": 15639,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      },
+      "test": {
+        "total_frames": 288000,
+        "known_speech_frames": 60531,
+        "known_negative_frames": 203795,
+        "uncertain_frames": 23674,
+        "uncovered_known_speech_frames": 0,
+        "uncovered_known_negative_frames": 0
+      }
+    }
+  },
+  "summary_sha256": "8461f2b1ec21efc29f3b94630f015bac742d87b19bf34262c9e991262312a072"
+}

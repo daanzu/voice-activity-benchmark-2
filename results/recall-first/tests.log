@@ -1,0 +1,157 @@
+test_classic_reset (test_adapters.AdapterTests.test_classic_reset) ... ok
+test_silero_context_reset (test_adapters.AdapterTests.test_silero_context_reset) ... ok
+test_bad_frame_shape_rejected (test_context_ablation.ContextContractTests.test_bad_frame_shape_rejected) ... ok
+test_exact_prefix_contract_and_retained_recurrence_both_rates (test_context_ablation.ContextContractTests.test_exact_prefix_contract_and_retained_recurrence_both_rates) ... ok
+test_real_model_reset_is_exact (test_context_ablation.ContextContractTests.test_real_model_reset_is_exact) ... ok
+test_calibration_only_uses_feasible_development_points (test_context_results.ContextResultTests.test_calibration_only_uses_feasible_development_points) ... ok
+test_latency_matching_matches_shared_evaluator (test_context_results.ContextResultTests.test_latency_matching_matches_shared_evaluator) ... ok
+test_paired_bootstrap_identical_arms_gives_zero_interval (test_context_results.ContextResultTests.test_paired_bootstrap_identical_arms_gives_zero_interval) ... ok
+test_per_stream_totals_conditions_and_thresholds (test_context_results.ContextResultTests.test_per_stream_totals_conditions_and_thresholds) ... ok
+test_report_does_not_claim_missing_optional_oracle (test_context_results.ContextResultTests.test_report_does_not_claim_missing_optional_oracle) ... ok
+test_same_model_runtime_manifest_and_full_clocks (test_context_results.ContextResultTests.test_same_model_runtime_manifest_and_full_clocks) ... ok
+test_three_pass_timing_arithmetic (test_context_results.ContextResultTests.test_three_pass_timing_arithmetic) ... ok
+test_background_is_only_generic_speech (test_dataset.DatasetTests.test_background_is_only_generic_speech) ... ok
+test_intervals_half_open (test_dataset.DatasetTests.test_intervals_half_open) ... ok
+test_manifest_refuses_overwrite (test_dataset.DatasetTests.test_manifest_refuses_overwrite) ... ok
+test_repeatability_and_quiet_labels (test_dataset.DatasetTests.test_repeatability_and_quiet_labels) ... ok
+test_silence_is_not_speech (test_dataset.DatasetTests.test_silence_is_not_speech) ... ok
+test_split_assets_are_disjoint (test_dataset.DatasetTests.test_split_assets_are_disjoint) ... ok
+test_early_notification_remains_signed (test_event_matching.EventMatchingTests.test_early_notification_remains_signed) ... ok
+test_entirely_unknown_activation_is_ambiguous (test_event_matching.EventMatchingTests.test_entirely_unknown_activation_is_ambiguous) ... ok
+test_forced_eof_is_excluded_from_notification_latency (test_event_matching.EventMatchingTests.test_forced_eof_is_excluded_from_notification_latency) ... ok
+test_fragments_are_counted_and_longest_overlap_supplies_latency (test_event_matching.EventMatchingTests.test_fragments_are_counted_and_longest_overlap_supplies_latency) ... ok
+test_global_assignment_can_use_an_alternative_reference (test_event_matching.EventMatchingTests.test_global_assignment_can_use_an_alternative_reference) ... ok
+test_one_long_detection_cannot_recall_multiple_references (test_event_matching.EventMatchingTests.test_one_long_detection_cannot_recall_multiple_references) ... ok
+test_source_clipping_is_distinct_from_premature_notification (test_event_matching.EventMatchingTests.test_source_clipping_is_distinct_from_premature_notification) ... ok
+test_unknown_sliver_does_not_hide_known_negative_activation (test_event_matching.EventMatchingTests.test_unknown_sliver_does_not_hide_known_negative_activation) ... ok
+[W 261005 01:54:31 manager:626] Encountered error when searching for config: [Errno 30] Read-only file system: '/home/agent/.config/marimo'
+[W 261005 01:54:31 manager:626] Encountered error when searching for config: [Errno 30] Read-only file system: '/home/agent/.config/marimo'
+mkdir -p failed for path /home/agent/.config/matplotlib: [Errno 30] Read-only file system: '/home/agent/.config/matplotlib'
+Matplotlib created a temporary cache directory at /tmp/matplotlib-zulrkcy8 because there was an issue with the default path (/home/agent/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+Fontconfig error: No writable cache directories
+[W 261005 01:54:32 manager:626] Encountered error when searching for config: [Errno 30] Read-only file system: '/home/agent/.config/marimo'
+test_binary_modes_are_not_interpolated (test_explorer.ExplorerPlotTests.test_binary_modes_are_not_interpolated) ... ok
+test_default_is_small_and_colors_stable (test_explorer.ExplorerPlotTests.test_default_is_small_and_colors_stable) ... ok
+test_empty_single_all_and_repeated_views (test_explorer.ExplorerPlotTests.test_empty_single_all_and_repeated_views) ... ok
+test_holdout_and_reference_are_distinct (test_explorer.ExplorerPlotTests.test_holdout_and_reference_are_distinct) ... ok
+test_missing_latency_and_negative_delay_preserved (test_explorer.ExplorerPlotTests.test_missing_latency_and_negative_delay_preserved) ... ok
+test_percentage_bounds_and_source_values (test_explorer.ExplorerPlotTests.test_percentage_bounds_and_source_values) ... ok
+test_performance_does_not_claim_holdout_or_threshold (test_explorer.ExplorerPlotTests.test_performance_does_not_claim_holdout_or_threshold) ... ok
+test_presets_and_result_switch (test_explorer.ExplorerPlotTests.test_presets_and_result_switch) ... ok
+test_reading_guide_is_collapsed_and_distinguishes_metrics (test_explorer.ExplorerPlotTests.test_reading_guide_is_collapsed_and_distinguishes_metrics) ... ok
+test_missing_embedded_marker_is_an_error (test_explorer.ExplorerSnapshotTests.test_missing_embedded_marker_is_an_error) ... ok
+test_notebook_is_standalone (test_explorer.ExplorerSnapshotTests.test_notebook_is_standalone) ... ok
+test_snapshot_is_reproducible_and_exact (test_explorer.ExplorerSnapshotTests.test_snapshot_is_reproducible_and_exact) ... ok
+test_splits_and_counts (test_explorer.ExplorerSnapshotTests.test_splits_and_counts) ... ok
+test_future_independence_and_bounded_cache (test_fsmn.FSMNTests.test_future_independence_and_bounded_cache) ... ok
+test_streaming_matches_batched_canonical_frontend (test_fsmn.FSMNTests.test_streaming_matches_batched_canonical_frontend) ... ok
+test_warmup_reset_and_input (test_fsmn.FSMNTests.test_warmup_reset_and_input) ... ok
+test_endpoint_waits_full_silence (test_metrics.MetricsTests.test_endpoint_waits_full_silence) ... ok
+test_eof_censored (test_metrics.MetricsTests.test_eof_censored) ... ok
+test_never_positive_is_explicit (test_metrics.MetricsTests.test_never_positive_is_explicit) ... ok
+test_perfect_frames (test_metrics.MetricsTests.test_perfect_frames) ... ok
+test_unknown_excluded (test_metrics.MetricsTests.test_unknown_excluded) ... ok
+test_no_future_resampling (test_metrics.StreamingTests.test_no_future_resampling) ... ok
+test_resampling_chunk_independence (test_metrics.StreamingTests.test_resampling_chunk_independence) ... ok
+test_agc2 (test_native.NativeTests.test_agc2) ... ok
+test_pcm_boundaries (test_native.NativeTests.test_pcm_boundaries) ... ok
+test_rnnoise (test_native.NativeTests.test_rnnoise) ... ok
+test_speex (test_native.NativeTests.test_speex) ... warning: The VAD has been replaced by a hack pending a complete rewrite
+warning: The VAD has been replaced by a hack pending a complete rewrite
+ok
+test_ten (test_native.NativeTests.test_ten) ... ok
+test_builder_rejects_fabricated_infeasible_result (test_recall_explorer.RecallArtifactTests.test_builder_rejects_fabricated_infeasible_result) ... ok
+test_builder_rejects_holdout_retuning (test_recall_explorer.RecallArtifactTests.test_builder_rejects_holdout_retuning) ... ok
+test_builder_rejects_zero_operational_choice (test_recall_explorer.RecallArtifactTests.test_builder_rejects_zero_operational_choice) ... ok
+test_real_sources_are_bundled_without_changing_legacy_sets (test_recall_explorer.RecallArtifactTests.test_real_sources_are_bundled_without_changing_legacy_sets) ... ok
+[W 261005 01:54:33 manager:626] Encountered error when searching for config: [Errno 30] Read-only file system: '/home/agent/.config/marimo'
+[W 261005 01:54:33 manager:626] Encountered error when searching for config: [Errno 30] Read-only file system: '/home/agent/.config/marimo'
+[W 261005 01:54:33 manager:626] Encountered error when searching for config: [Errno 30] Read-only file system: '/home/agent/.config/marimo'
+test_all_real_targets_and_views_render_without_retuning (test_recall_explorer.RecallPlotTests.test_all_real_targets_and_views_render_without_retuning) ... ok
+test_all_views_empty_single_repeated_and_full_axes (test_recall_explorer.RecallPlotTests.test_all_views_empty_single_repeated_and_full_axes) ... ok
+test_comparison_table_keeps_dev_test_and_failure_separate (test_recall_explorer.RecallPlotTests.test_comparison_table_keeps_dev_test_and_failure_separate) ... ok
+test_diagnostic_is_separate_and_classic_reference_is_native (test_recall_explorer.RecallPlotTests.test_diagnostic_is_separate_and_classic_reference_is_native) ... ok
+test_duration_and_event_rate_are_distinct (test_recall_explorer.RecallPlotTests.test_duration_and_event_rate_are_distinct) ... ok
+test_holdout_uses_actual_recall_and_reports_unattainable (test_recall_explorer.RecallPlotTests.test_holdout_uses_actual_recall_and_reports_unattainable) ... ok
+test_matched_classic_can_be_included_without_resetting_subset (test_recall_explorer.RecallPlotTests.test_matched_classic_can_be_included_without_resetting_subset) ... ok
+test_positive_cutoff_can_be_feasible_but_already_all_positive (test_recall_explorer.RecallPlotTests.test_positive_cutoff_can_be_feasible_but_already_all_positive) ... ok
+test_positive_log_sweep_keeps_exact_cutoff_and_excludes_zero (test_recall_explorer.RecallPlotTests.test_positive_log_sweep_keeps_exact_cutoff_and_excludes_zero) ... ok
+test_reading_guide_explains_frame_event_and_diagnostic (test_recall_explorer.RecallPlotTests.test_reading_guide_explains_frame_event_and_diagnostic) ... ok
+test_selection_changes_do_not_retune_or_mutate_source (test_recall_explorer.RecallPlotTests.test_selection_changes_do_not_retune_or_mutate_source) ... ok
+test_all_positive_cutoffs_exhaustively_minimize_fp (test_recall_first.RecallFirstTests.test_all_positive_cutoffs_exhaustively_minimize_fp) ... ok
+test_binary_metadata_must_match_scores (test_recall_first.RecallFirstTests.test_binary_metadata_must_match_scores) ... ok
+test_binary_native_threshold_preserved (test_recall_first.RecallFirstTests.test_binary_native_threshold_preserved) ... ok
+test_binary_target_unattainable_honestly (test_recall_first.RecallFirstTests.test_binary_target_unattainable_honestly) ... ok
+test_curve_extends_to_zero_but_diagnostic_excluded (test_recall_first.RecallFirstTests.test_curve_extends_to_zero_but_diagnostic_excluded) ... ok
+test_empty_speech_or_negative_support_rejected (test_recall_first.RecallFirstTests.test_empty_speech_or_negative_support_rejected) ... ok
+test_exact_fraction_ceil_for_classic_parity (test_recall_first.RecallFirstTests.test_exact_fraction_ceil_for_classic_parity) ... ok
+test_exact_highest_feasible_cutoff (test_recall_first.RecallFirstTests.test_exact_highest_feasible_cutoff) ... ok
+test_holdout_records_rejected_by_selector (test_recall_first.RecallFirstTests.test_holdout_records_rejected_by_selector) ... ok
+test_holdout_traces_are_not_accessed (test_recall_first.RecallFirstTests.test_holdout_traces_are_not_accessed) ... ok
+test_invalid_scores_rejected (test_recall_first.RecallFirstTests.test_invalid_scores_rejected) ... ok
+test_invalid_target_rejected (test_recall_first.RecallFirstTests.test_invalid_target_rejected) ... ok
+test_mixed_split_rejected (test_recall_first.RecallFirstTests.test_mixed_split_rejected) ... ok
+test_near_zero_positive_score_is_operational (test_recall_first.RecallFirstTests.test_near_zero_positive_score_is_operational) ... ok
+test_parity_denominators_can_differ (test_recall_first.RecallFirstTests.test_parity_denominators_can_differ) ... ok
+test_raw_manifest_and_coverage_checked (test_recall_first.RecallFirstTests.test_raw_manifest_and_coverage_checked) ... ok
+test_score_ties_included_and_do_not_require_randomization (test_recall_first.RecallFirstTests.test_score_ties_included_and_do_not_require_randomization) ... ok
+test_uncertainty_does_not_enter_target_denominator (test_recall_first.RecallFirstTests.test_uncertainty_does_not_enter_target_denominator) ... ok
+test_zero_is_never_selected_for_probabilities (test_recall_first.RecallFirstTests.test_zero_is_never_selected_for_probabilities) ... ok
+test_all_retained_metric_arithmetic (test_recall_results.RecallResultTests.test_all_retained_metric_arithmetic) ... ok
+test_feasibility_and_positive_cutoffs (test_recall_results.RecallResultTests.test_feasibility_and_positive_cutoffs) ... ok
+test_frozen_choices_are_identical_to_reported_choices (test_recall_results.RecallResultTests.test_frozen_choices_are_identical_to_reported_choices) ... ok
+test_full_cross_product_and_manifest (test_recall_results.RecallResultTests.test_full_cross_product_and_manifest) ... ok
+test_targets_use_exact_classic_development_counts (test_recall_results.RecallResultTests.test_targets_use_exact_classic_development_counts) ... ok
+test_zero_is_diagnostic_and_all_positive (test_recall_results.RecallResultTests.test_zero_is_diagnostic_and_all_positive) ... ok
+test_measurements (test_results.RecordedResults.test_measurements) ... ok
+test_scripts_parse (test_results.RecordedResults.test_scripts_parse) ... ok
+test_exact_original_dataset_and_complete_runs (test_silero_comparison_results.SileroComparisonResults.test_exact_original_dataset_and_complete_runs) ... ok
+test_packages_and_equivalent_model_provenance (test_silero_comparison_results.SileroComparisonResults.test_packages_and_equivalent_model_provenance) ... ok
+test_paired_comparison_uses_all_frames_and_identical_clocks (test_silero_comparison_results.SileroComparisonResults.test_paired_comparison_uses_all_frames_and_identical_clocks) ... ok
+test_unchanged_development_protocol_and_timing_arithmetic (test_silero_comparison_results.SileroComparisonResults.test_unchanged_development_protocol_and_timing_arithmetic) ... ok
+test_bad_audio_is_rejected_before_native_call (test_silero_lite.AudioContractTests.test_bad_audio_is_rejected_before_native_call) ... ok
+test_foreign_existing_import_fails_closed (test_silero_lite.AudioContractTests.test_foreign_existing_import_fails_closed) ... ok
+test_fresh_float32_frame_without_double_context (test_silero_lite.AudioContractTests.test_fresh_float32_frame_without_double_context) ... ok
+test_native_reset_and_probability_validation (test_silero_lite.AudioContractTests.test_native_reset_and_probability_validation) ... ok
+test_read_only_noncontiguous_and_float64_are_normalized_to_buffer_contract (test_silero_lite.AudioContractTests.test_read_only_noncontiguous_and_float64_are_normalized_to_buffer_contract) ... ok
+test_unpinned_version_and_same_process_conflict_fail_closed (test_silero_lite.AudioContractTests.test_unpinned_version_and_same_process_conflict_fail_closed) ... ok
+test_changed_model_library_or_wrapper_is_rejected (test_silero_lite.IntegrityTests.test_changed_model_library_or_wrapper_is_rejected) ... ok
+test_changed_wheel_is_rejected (test_silero_lite.IntegrityTests.test_changed_wheel_is_rejected) ... ok
+test_verified_metadata_and_missing_setup (test_silero_lite.IntegrityTests.test_verified_metadata_and_missing_setup) ... ok
+test_wrong_distribution_version_is_rejected (test_silero_lite.IntegrityTests.test_wrong_distribution_version_is_rejected) ... ok
+test_native_0_3_0 (test_silero_lite.NativeWheelTests.test_native_0_3_0) ... ok
+test_native_0_4_0 (test_silero_lite.NativeWheelTests.test_native_0_4_0) ... ok
+
+----------------------------------------------------------------------
+Ran 112 tests in 6.144s
+
+OK
