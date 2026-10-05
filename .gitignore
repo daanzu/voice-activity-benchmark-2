@@ -15,3 +15,6 @@ results/silero-lite-comparison/raw/
 .venv
 results/context-ablation/raw/**/*.npz
 results/context-ablation/report-output.json
+results/recall-first/raw/*.npz
+results/recall-first/setup-logs/
+notebooks/__marimo__/
