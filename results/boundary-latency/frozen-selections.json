@@ -1,0 +1,2477 @@
+{
+  "manifest_sha256": "9fba764ac3692dba68712e5b6ea78904288bc479cf44292c4a8a81ed089a7106",
+  "test_manifest_sha256": "d92496d5f067835f07026989340ccf91b59c3d8157ac0499c426793f739a7154",
+  "source_sha256": {
+    "boundary_latency.py": "e653f90fe1a93352627da4f10fc78263856da0361bf8d2a43cfc40a98e6d94d6",
+    "boundary_dataset.py": "54ff71053a90a572f8c9c12ab37559b07c6b457923017c66a95c9550301e437a",
+    "boundary_report.py": "72be5bdd24872edc7e7dc4aa9f25253a6501e931cd3145129a20ab0664f31e5c"
+  },
+  "raw_sha256": {
+    "classic-0": {
+      "npz": "fd660042d82492ac51d1d147bf46f98ae98d9bac5590587f6b42894b2b98d1ad",
+      "json": "cf64f38c38469efbe7ed32a3407a6e94d0a75cd50aabbbe192dfd6d6f7f201b9"
+    },
+    "classic-1": {
+      "npz": "31392a5b9e92a50f5518f841834db87872cedc4d53ccc06576b2d4fcfe6964b2",
+      "json": "6bce1774785be668f8769e59c55ca12dd967d79492bf4f81274a4fc2d5c0a4f6"
+    },
+    "classic-2": {
+      "npz": "066732e7bac0c12268efbccc1bd67f3c7d2ed6dfcb7b66e24f3c32d523fc3d4f",
+      "json": "a036a8b6cb746841c005f1497bb29ee8fcb6c3654fcb53b0df0879b601043ab7"
+    },
+    "classic-3": {
+      "npz": "193b391a3167c3f7d77e7dc16c3a9be5e97a2aebb651f1ee4db4eda2bf3bc71f",
+      "json": "89d936c77d57a3aa7f2fd29478885b373db5a9f5b298a5f62f3be86e53f8da46"
+    },
+    "silero": {
+      "npz": "32c6a340d6d4c560ce9f228cf22f182d437256bf6cf0df0fc6759fc0c98a9e50",
+      "json": "326d3a44e6769ba75abee3eab3f464a1407817372375691973cf50d04e309932"
+    },
+    "silero-lite-0.3.0": {
+      "npz": "8541099f655769b00f766ed6a371adce9c29baf3aaaf97e28c066067b8f1824c",
+      "json": "6d5c0ae19d00b629718a65668d78290a949a4145ac4301b815b24d112ae8f61a"
+    },
+    "silero-lite-0.4.0": {
+      "npz": "32c6a340d6d4c560ce9f228cf22f182d437256bf6cf0df0fc6759fc0c98a9e50",
+      "json": "0de44a6d7844ee180f65bd52eb9142882230203d62f27b31d68079a1ed8fd0c3"
+    },
+    "agc2": {
+      "npz": "8cd86ccfc590dd8de67e7d914159e4bd10cb8d6b5645e924d39425ee07ef4b4f",
+      "json": "b88973d37cc9f805f07fe19e90c0353e83a9dde6e461e7b6e2c719f9a477799a"
+    },
+    "ten": {
+      "npz": "b5a1cc9a10315ca92213355e7b42c0025e698caa0683ca4f7883c6a167843bcb",
+      "json": "04c968c2431e8f09d30b43c3a0b8f57eb0ed92cfb8011f1f220b55ae3f0643a7"
+    },
+    "fsmn": {
+      "npz": "9589fed5a4852be04cf887c97032c12692eb9679838763c387fa6680105b9a6a",
+      "json": "703adb9861714aba1f2f0620b631baab42003204e03aef1dd5d48e31ba8526dd"
+    },
+    "rnnoise": {
+      "npz": "0b797abc86d55d8bb2ed5e5e2613e072cb24df488d644ad8889d6e63eb9be4ef",
+      "json": "0e3663bff5ec8baf9a724a79660f3f5ae1b8ee35dcf387ed14b5d5901553d0af"
+    },
+    "speex": {
+      "npz": "cfa0c0a438f7d15e4671dd574e21376765324c827f65f7a64d3d514c279fb9b8",
+      "json": "417d8cb0b1bc4c135ab84df5aae4bad42c888dc1a308a88552721dbcd8d7124d"
+    }
+  },
+  "mode": "frozen_synthetic_stress_test",
+  "test_used_for_selection": false,
+  "test_label_access_before_selection": "manifest/reference validation only, not controller choice",
+  "threshold_choices": [
+    {
+      "backend": "classic-0",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.999799538939561,
+          "reason": null,
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.999799538939561,
+          "reason": null,
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.999799538939561,
+          "reason": null,
+          "selection": "native binary point"
+        }
+      ]
+    },
+    {
+      "backend": "classic-1",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.999799538939561,
+          "reason": null,
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.999799538939561,
+          "reason": null,
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.999799538939561,
+          "reason": null,
+          "selection": "native binary point"
+        }
+      ]
+    },
+    {
+      "backend": "classic-2",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.9987972336373659,
+          "reason": null,
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.5,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.9987972336373659,
+          "reason": null,
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": false,
+          "threshold": null,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.9987972336373659,
+          "reason": "native binary point misses target",
+          "selection": "native binary point"
+        }
+      ]
+    },
+    {
+      "backend": "classic-3",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": false,
+          "threshold": null,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.9747419063846847,
+          "reason": "native binary point misses target",
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": false,
+          "threshold": null,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.9747419063846847,
+          "reason": "native binary point misses target",
+          "selection": "native binary point"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": false,
+          "threshold": null,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 0.9747419063846847,
+          "reason": "native binary point misses target",
+          "selection": "native binary point"
+        }
+      ]
+    },
+    {
+      "backend": "silero",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.1662856638431549,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.1050451397895813,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.0816660225391388,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.03212308883666992,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.011157572269439697,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.004628121852874756,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.1662856638431549,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.1050451397895813,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.0816660225391388,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "agc2",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.012020289897918701,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.005150049924850464,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.0010313987731933594,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "ten",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.30384358763694763,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.29868051409721375,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.28124094009399414,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "fsmn",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.7349738478660583,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.6254448294639587,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.37827545404434204,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "rnnoise",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.011797896586358547,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.006554852705448866,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.0020321921911090612,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    },
+    {
+      "backend": "speex",
+      "choices": [
+        {
+          "target": {
+            "id": "recall-99/100",
+            "label": "99.000%",
+            "recall": 0.99,
+            "numerator": 99,
+            "denominator": 100,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.86,
+          "required_speech_frames": 9878,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-995/1000",
+            "label": "99.500%",
+            "recall": 0.995,
+            "numerator": 199,
+            "denominator": 200,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.77,
+          "required_speech_frames": 9928,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        },
+        {
+          "target": {
+            "id": "recall-999/1000",
+            "label": "99.900%",
+            "recall": 0.999,
+            "numerator": 999,
+            "denominator": 1000,
+            "reference_backend": null
+          },
+          "feasible": true,
+          "threshold": 0.17,
+          "required_speech_frames": 9968,
+          "known_speech_frames": 9977,
+          "max_dev_recall": 1.0,
+          "reason": null,
+          "selection": "highest feasible strictly-positive dev score cutoff"
+        }
+      ]
+    }
+  ],
+  "selections": [
+    {
+      "backend": "classic-0",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.5
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-0",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.5
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "classic-1",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.5
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-2",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.5
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.2
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.2
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "classic-3",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.2
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.0816660225391388,
+        "off": 0.0408330112695694,
+        "start_s": 0.032,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.1662856638431549,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.1050451397895813,
+        "off": 0.1050451397895813,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.1050451397895813,
+        "off": 0.1050451397895813,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.1050451397895813,
+        "off": 0.1050451397895813,
+        "start_s": 0.032,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.032,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.064,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.004628121852874756,
+        "off": 0.002314060926437378,
+        "start_s": 0.064,
+        "silence_s": 0.5
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.03212308883666992,
+        "off": 0.03212308883666992,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.03212308883666992,
+        "off": 0.03212308883666992,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.03212308883666992,
+        "off": 0.03212308883666992,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.03212308883666992,
+        "off": 0.03212308883666992,
+        "start_s": 0.032,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.03212308883666992,
+        "off": 0.03212308883666992,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.03212308883666992,
+        "off": 0.03212308883666992,
+        "start_s": 0.032,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.032,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "silero-lite-0.3.0",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.032,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.0816660225391388,
+        "off": 0.0408330112695694,
+        "start_s": 0.032,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.1662856638431549,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.1050451397895813,
+        "off": 0.1050451397895813,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.1050451397895813,
+        "off": 0.1050451397895813,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.1050451397895813,
+        "off": 0.1050451397895813,
+        "start_s": 0.032,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.032,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "silero-lite-0.4.0",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.1662856638431549,
+        "off": 0.08314283192157745,
+        "start_s": 0.064,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.0010313987731933594,
+        "off": 0.0005156993865966797,
+        "start_s": 0.064,
+        "silence_s": 0.5
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.012020289897918701,
+        "off": 0.006010144948959351,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.005150049924850464,
+        "off": 0.005150049924850464,
+        "start_s": 0.032,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.2
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "agc2",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.30384358763694763,
+        "off": 0.15192179381847382,
+        "start_s": 0.032,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.29868051409721375,
+        "off": 0.29868051409721375,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.29868051409721375,
+        "off": 0.29868051409721375,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.29868051409721375,
+        "off": 0.29868051409721375,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.032,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "ten",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.15
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.5,
+        "off": 0.5,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.0,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.032,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "fsmn",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.7349738478660583,
+        "off": 0.7349738478660583,
+        "start_s": 0.064,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.0020321921911090612,
+        "off": 0.0020321921911090612,
+        "start_s": 0.0,
+        "silence_s": 0.3
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.0,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "rnnoise",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.5,
+        "off": 0.25,
+        "start_s": 0.064,
+        "silence_s": 0.064
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "recall-priority",
+      "label": "Maximum source-aligned speech coverage",
+      "controller": {
+        "on": 0.17,
+        "off": 0.085,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-50-100",
+      "label": "Best development intact-turn success within START 50 / END 100 ms",
+      "controller": {
+        "on": 0.17,
+        "off": 0.085,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-50-200",
+      "label": "Best development intact-turn success within START 50 / END 200 ms",
+      "controller": {
+        "on": 0.86,
+        "off": 0.86,
+        "start_s": 0.0,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-50-300",
+      "label": "Best development intact-turn success within START 50 / END 300 ms",
+      "controller": {
+        "on": 0.86,
+        "off": 0.86,
+        "start_s": 0.0,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-50-500",
+      "label": "Best development intact-turn success within START 50 / END 500 ms",
+      "controller": {
+        "on": 0.77,
+        "off": 0.77,
+        "start_s": 0.0,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-100-100",
+      "label": "Best development intact-turn success within START 100 / END 100 ms",
+      "controller": {
+        "on": 0.17,
+        "off": 0.085,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-100-200",
+      "label": "Best development intact-turn success within START 100 / END 200 ms",
+      "controller": {
+        "on": 0.86,
+        "off": 0.86,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-100-300",
+      "label": "Best development intact-turn success within START 100 / END 300 ms",
+      "controller": {
+        "on": 0.86,
+        "off": 0.86,
+        "start_s": 0.032,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-100-500",
+      "label": "Best development intact-turn success within START 100 / END 500 ms",
+      "controller": {
+        "on": 0.77,
+        "off": 0.77,
+        "start_s": 0.032,
+        "silence_s": 0.1
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-200-100",
+      "label": "Best development intact-turn success within START 200 / END 100 ms",
+      "controller": {
+        "on": 0.17,
+        "off": 0.085,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-200-200",
+      "label": "Best development intact-turn success within START 200 / END 200 ms",
+      "controller": {
+        "on": 0.86,
+        "off": 0.86,
+        "start_s": 0.064,
+        "silence_s": 0.032
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-200-300",
+      "label": "Best development intact-turn success within START 200 / END 300 ms",
+      "controller": {
+        "on": 0.86,
+        "off": 0.86,
+        "start_s": 0.064,
+        "silence_s": 0.0
+      }
+    },
+    {
+      "backend": "speex",
+      "policy": "joint-200-500",
+      "label": "Best development intact-turn success within START 200 / END 500 ms",
+      "controller": {
+        "on": 0.77,
+        "off": 0.77,
+        "start_s": 0.064,
+        "silence_s": 0.1
+      }
+    }
+  ],
+  "grid": {
+    "silence_s": [
+      0.0,
+      0.032,
+      0.064,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "start_confirmation_s": [
+      0.0,
+      0.032,
+      0.064
+    ],
+    "off_on_ratios": [
+      1.0,
+      0.5
+    ],
+    "thresholds": "0.5 plus attainable dev speech-frame recall 99/99.5/99.9 percent; binary native 0.5 only"
+  },
+  "selection": "12 predeclared START/END joint-success targets plus max source-coverage reference; tie: coverage, operational false-positive duration, false START, premature END, fragmentation, stable controller ID"
+}

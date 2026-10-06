@@ -1,0 +1,216 @@
+{
+  "manifest_sha256": "9fba764ac3692dba68712e5b6ea78904288bc479cf44292c4a8a81ed089a7106",
+  "definition": "Inserted gap is nonzero-support to nonzero-support; actual RMS gap is first continuation source activity minus last prefix source activity in emitted clean-source labels",
+  "results": [
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 50,
+      "actual_rms_gap_ms": {
+        "min": 144.93750000000017,
+        "max": 441.6874999999998
+      },
+      "families": 4,
+      "values_ms": [
+        433.62499999999994,
+        441.6874999999998,
+        373.5625,
+        144.93750000000017
+      ]
+    },
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 100,
+      "actual_rms_gap_ms": {
+        "min": 194.9375000000002,
+        "max": 491.68750000000006
+      },
+      "families": 4,
+      "values_ms": [
+        483.62500000000017,
+        491.68750000000006,
+        423.5625000000003,
+        194.9375000000002
+      ]
+    },
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 150,
+      "actual_rms_gap_ms": {
+        "min": 244.93750000000003,
+        "max": 541.6874999999999
+      },
+      "families": 4,
+      "values_ms": [
+        533.625,
+        541.6874999999999,
+        473.5625000000001,
+        244.93750000000003
+      ]
+    },
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 200,
+      "actual_rms_gap_ms": {
+        "min": 294.93750000000006,
+        "max": 591.6874999999997
+      },
+      "families": 4,
+      "values_ms": [
+        583.6249999999999,
+        591.6874999999997,
+        523.5624999999999,
+        294.93750000000006
+      ]
+    },
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 300,
+      "actual_rms_gap_ms": {
+        "min": 394.93750000000017,
+        "max": 691.6874999999998
+      },
+      "families": 4,
+      "values_ms": [
+        683.6249999999999,
+        691.6874999999998,
+        623.5625,
+        394.93750000000017
+      ]
+    },
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 500,
+      "actual_rms_gap_ms": {
+        "min": 594.9374999999999,
+        "max": 891.6875
+      },
+      "families": 4,
+      "values_ms": [
+        883.6250000000001,
+        891.6875,
+        823.5625000000002,
+        594.9374999999999
+      ]
+    },
+    {
+      "split": "dev",
+      "inserted_support_gap_ms": 800,
+      "actual_rms_gap_ms": {
+        "min": 894.9375000000001,
+        "max": 1191.6874999999998
+      },
+      "families": 4,
+      "values_ms": [
+        1183.625,
+        1191.6874999999998,
+        1123.5625,
+        894.9375000000001
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 50,
+      "actual_rms_gap_ms": {
+        "min": 401.6250000000001,
+        "max": 508.4375000000001
+      },
+      "families": 4,
+      "values_ms": [
+        401.6250000000001,
+        458.5000000000001,
+        403.31250000000017,
+        508.4375000000001
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 100,
+      "actual_rms_gap_ms": {
+        "min": 451.62499999999994,
+        "max": 558.4374999999999
+      },
+      "families": 4,
+      "values_ms": [
+        451.62499999999994,
+        508.49999999999994,
+        453.3125,
+        558.4374999999999
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 150,
+      "actual_rms_gap_ms": {
+        "min": 501.6250000000002,
+        "max": 608.4375000000002
+      },
+      "families": 4,
+      "values_ms": [
+        501.6250000000002,
+        558.5000000000002,
+        503.3125000000003,
+        608.4375000000002
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 200,
+      "actual_rms_gap_ms": {
+        "min": 551.625,
+        "max": 658.4375
+      },
+      "families": 4,
+      "values_ms": [
+        551.625,
+        608.5,
+        553.3125000000001,
+        658.4375
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 300,
+      "actual_rms_gap_ms": {
+        "min": 651.6250000000001,
+        "max": 758.4375000000001
+      },
+      "families": 4,
+      "values_ms": [
+        651.6250000000001,
+        708.5000000000001,
+        653.3125000000002,
+        758.4375000000001
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 500,
+      "actual_rms_gap_ms": {
+        "min": 851.6249999999999,
+        "max": 958.4374999999999
+      },
+      "families": 4,
+      "values_ms": [
+        851.6249999999999,
+        908.4999999999999,
+        853.3125000000003,
+        958.4374999999999
+      ]
+    },
+    {
+      "split": "test",
+      "inserted_support_gap_ms": 800,
+      "actual_rms_gap_ms": {
+        "min": 1151.6250000000002,
+        "max": 1258.4375
+      },
+      "families": 4,
+      "values_ms": [
+        1151.6250000000002,
+        1208.5000000000002,
+        1153.3125000000002,
+        1258.4375
+      ]
+    }
+  ]
+}

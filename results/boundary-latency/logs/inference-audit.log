@@ -1,0 +1,18 @@
+{
+  "manifest_sha256": "9fba764ac3692dba68712e5b6ea78904288bc479cf44292c4a8a81ed089a7106",
+  "source_sha256": {
+    "vadbench/run.py": "937cfecf3eed96f7681bf360c0c0328f344ce8f740a912ff0b74071df39e4011",
+    "vadbench/adapters.py": "ca644a6682bdeefd18ba8cf0902747dab24d7cf283db0a4549d98219becc518d"
+  },
+  "records": 272,
+  "pairs": 56,
+  "causal_time_policy": "Compare every full trace row emitted at acquisition timestamp <= shared_prefix_end_sample/16000; use availability clock, not backdated score intervals",
+  "exceptions": [],
+  "direct_silero_vs_lite_0_4": {
+    "exactly_equal": true,
+    "max_abs_difference": 0.0,
+    "different_records": 0,
+    "records": 272
+  },
+  "all_passed": true
+}

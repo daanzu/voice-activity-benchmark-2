@@ -4,6 +4,10 @@ A reproducible, **limited CPU-throughput experiment** for classic WebRTC VAD and
 
 This is not a seven-backend accuracy benchmark. Only classic WebRTC and direct Silero ONNX inference were timed. No real-world VAD accuracy, boundary accuracy, power consumption, or end-to-end application latency was measured.
 
+## Rapid speech onset and ending
+
+The [causal latency benchmark](results/boundary-latency/FINDINGS.md) measures when START/END decisions become available, separately from backdated audio boundaries. A frozen 272-stream synthetic boundary/pause suite compares all 12 configurations, counts missed and premature responses in every turn denominator, and preserves recall/false-start/latency tradeoffs. See the [protocol](docs/BOUNDARY_LATENCY.md), [corpus construction](docs/BOUNDARY_DATASET.md), and [separate interactive boundary explorer](notebooks/explore_boundaries.py). Acquisition-time simulation is not real-device latency or semantic turn completion. The separate [hard-gated pause diagnostic](results/boundary-pause-probe/FINDINGS.md) verifies actual 50–800 ms RMS-activity gaps with the same frozen controllers; it complements the preserved-source study and discloses artificial-splice limitations.
+
 ## Recall-first tradeoffs
 
 The [recall-first analysis](results/recall-first/FINDINGS.md) adds 99%, 99.5%, and 99.9% speech-frame recall targets and comparisons against all four classic WebRTC modes. Thresholds minimize development false-positive duration, then stay frozen on holdout; actual holdout recall and false-event costs are reported separately. The [interactive explorer](notebooks/README.md) includes the expanded near-zero sweep and target controls. See the [protocol and reproduction guide](docs/RECALL_FIRST.md).

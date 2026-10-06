@@ -1,0 +1,62 @@
+{
+  "manifest_sha256": "9fba764ac3692dba68712e5b6ea78904288bc479cf44292c4a8a81ed089a7106",
+  "test_manifest_sha256": "d92496d5f067835f07026989340ccf91b59c3d8157ac0499c426793f739a7154",
+  "source_sha256": {
+    "boundary_latency.py": "e653f90fe1a93352627da4f10fc78263856da0361bf8d2a43cfc40a98e6d94d6",
+    "boundary_dataset.py": "54ff71053a90a572f8c9c12ab37559b07c6b457923017c66a95c9550301e437a",
+    "boundary_report.py": "72be5bdd24872edc7e7dc4aa9f25253a6501e931cd3145129a20ab0664f31e5c"
+  },
+  "raw_sha256": {
+    "classic-0": {
+      "npz": "fd660042d82492ac51d1d147bf46f98ae98d9bac5590587f6b42894b2b98d1ad",
+      "json": "cf64f38c38469efbe7ed32a3407a6e94d0a75cd50aabbbe192dfd6d6f7f201b9"
+    },
+    "classic-1": {
+      "npz": "31392a5b9e92a50f5518f841834db87872cedc4d53ccc06576b2d4fcfe6964b2",
+      "json": "6bce1774785be668f8769e59c55ca12dd967d79492bf4f81274a4fc2d5c0a4f6"
+    },
+    "classic-2": {
+      "npz": "066732e7bac0c12268efbccc1bd67f3c7d2ed6dfcb7b66e24f3c32d523fc3d4f",
+      "json": "a036a8b6cb746841c005f1497bb29ee8fcb6c3654fcb53b0df0879b601043ab7"
+    },
+    "classic-3": {
+      "npz": "193b391a3167c3f7d77e7dc16c3a9be5e97a2aebb651f1ee4db4eda2bf3bc71f",
+      "json": "89d936c77d57a3aa7f2fd29478885b373db5a9f5b298a5f62f3be86e53f8da46"
+    },
+    "silero": {
+      "npz": "32c6a340d6d4c560ce9f228cf22f182d437256bf6cf0df0fc6759fc0c98a9e50",
+      "json": "326d3a44e6769ba75abee3eab3f464a1407817372375691973cf50d04e309932"
+    },
+    "silero-lite-0.3.0": {
+      "npz": "8541099f655769b00f766ed6a371adce9c29baf3aaaf97e28c066067b8f1824c",
+      "json": "6d5c0ae19d00b629718a65668d78290a949a4145ac4301b815b24d112ae8f61a"
+    },
+    "silero-lite-0.4.0": {
+      "npz": "32c6a340d6d4c560ce9f228cf22f182d437256bf6cf0df0fc6759fc0c98a9e50",
+      "json": "0de44a6d7844ee180f65bd52eb9142882230203d62f27b31d68079a1ed8fd0c3"
+    },
+    "agc2": {
+      "npz": "8cd86ccfc590dd8de67e7d914159e4bd10cb8d6b5645e924d39425ee07ef4b4f",
+      "json": "b88973d37cc9f805f07fe19e90c0353e83a9dde6e461e7b6e2c719f9a477799a"
+    },
+    "ten": {
+      "npz": "b5a1cc9a10315ca92213355e7b42c0025e698caa0683ca4f7883c6a167843bcb",
+      "json": "04c968c2431e8f09d30b43c3a0b8f57eb0ed92cfb8011f1f220b55ae3f0643a7"
+    },
+    "fsmn": {
+      "npz": "9589fed5a4852be04cf887c97032c12692eb9679838763c387fa6680105b9a6a",
+      "json": "703adb9861714aba1f2f0620b631baab42003204e03aef1dd5d48e31ba8526dd"
+    },
+    "rnnoise": {
+      "npz": "0b797abc86d55d8bb2ed5e5e2613e072cb24df488d644ad8889d6e63eb9be4ef",
+      "json": "0e3663bff5ec8baf9a724a79660f3f5ae1b8ee35dcf387ed14b5d5901553d0af"
+    },
+    "speex": {
+      "npz": "cfa0c0a438f7d15e4671dd574e21376765324c827f65f7a64d3d514c279fb9b8",
+      "json": "417d8cb0b1bc4c135ab84df5aae4bad42c888dc1a308a88552721dbcd8d7124d"
+    }
+  },
+  "mode": "frozen_synthetic_stress_test",
+  "test_used_for_selection": false,
+  "test_label_access_before_selection": "manifest/reference validation only, not controller choice"
+}
