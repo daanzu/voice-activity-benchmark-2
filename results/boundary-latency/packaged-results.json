@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "format": "gzip",
+  "mtime": 0,
+  "description": "Lossless original analysis bytes; no JSON reserialization",
+  "artifacts": {
+    "summary.json": {
+      "path": "summary.json.gz",
+      "uncompressed_bytes": 34971040,
+      "uncompressed_sha256": "2446067b8461a8f1cb5c3a9c6717e1268850381b8c4b118a00611d5627e13714",
+      "compressed_bytes": 1119324,
+      "compressed_sha256": "6baeada74cd1f268a2574f4f41da7cfd48aabb23993e944d57d32c098972ce71"
+    },
+    "development-curves.json": {
+      "path": "development-curves.json.gz",
+      "uncompressed_bytes": 14514000,
+      "uncompressed_sha256": "ef6a2caf682e093543b0928c8365d239f7dca978cda7f0a33a36be3e5743dbcd",
+      "compressed_bytes": 450824,
+      "compressed_sha256": "7552270668a045e8fe8484882d41c8442f3cf35c5775b6305cdd570effdced90"
+    },
+    "per-turn-test.json": {
+      "path": "per-turn-test.json.gz",
+      "uncompressed_bytes": 9768442,
+      "uncompressed_sha256": "85e5dccb505a328d8c1e0a12382ddfeb6e3653ab8ec59f8451ea7b05142769ad",
+      "compressed_bytes": 309400,
+      "compressed_sha256": "c5464ebe3e35ec2f16f6f83f756040529061a2f49c98c22b152f2241b9dc1f4b"
+    }
+  }
+}

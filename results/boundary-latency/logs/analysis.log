@@ -1,0 +1,13 @@
+Dev classic-0: 24 configurations, 8 Pareto points; 7.9s
+Dev classic-1: 24 configurations, 8 Pareto points; 17.8s
+Dev classic-2: 24 configurations, 16 Pareto points; 25.0s
+Dev classic-3: 24 configurations, 24 Pareto points; 33.8s
+Dev silero: 192 configurations, 169 Pareto points; 55.2s
+Dev silero-lite-0.3.0: 192 configurations, 125 Pareto points; 90.3s
+Dev silero-lite-0.4.0: 192 configurations, 169 Pareto points; 112.0s
+Dev agc2: 192 configurations, 101 Pareto points; 177.1s
+Dev ten: 192 configurations, 122 Pareto points; 223.3s
+Dev fsmn: 192 configurations, 115 Pareto points; 277.5s
+Dev rnnoise: 192 configurations, 132 Pareto points; 336.8s
+Dev speex: 192 configurations, 65 Pareto points; 370.4s
+{"output": "results/boundary-latency", "selections": 156, "candidates": 1632}

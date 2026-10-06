@@ -19,3 +19,7 @@ jobs:
       - run: python -m unittest discover -s tests -p '*explorer.py' -v
       - run: marimo export html notebooks/explore_results.py -o /tmp/explorer-static.html
       - run: marimo export html-wasm notebooks/explore_results.py -o /tmp/explorer-wasm --mode run
+      - run: python scripts/build_boundary_explorer_data.py --check
+      - run: marimo check --strict notebooks/explore_boundaries.py
+      - run: marimo export html notebooks/explore_boundaries.py -o /tmp/boundaries-static.html
+      - run: marimo export html-wasm notebooks/explore_boundaries.py -o /tmp/boundaries-wasm --mode run

@@ -1,0 +1,37 @@
+{
+  "status": "pre_inference_integrity_snapshot",
+  "command": "source .deps/runtime-env.sh && python -m vadbench.run --manifest data/boundary-v1/manifest.json --output results/boundary-latency/raw",
+  "sha256": {
+    "vadbench/run.py": "937cfecf3eed96f7681bf360c0c0328f344ce8f740a912ff0b74071df39e4011",
+    "vadbench/adapters.py": "ca644a6682bdeefd18ba8cf0902747dab24d7cf283db0a4549d98219becc518d",
+    "data/boundary-v1/manifest.json": "9fba764ac3692dba68712e5b6ea78904288bc479cf44292c4a8a81ed089a7106",
+    "data/boundary-v1/FROZEN.json": "1a59af4dfbf45e8ab07acb020523e8c35fe1a8a0ba063def80c944bcdd47a9cf",
+    "data/boundary-v1/test-manifest.json": "d92496d5f067835f07026989340ccf91b59c3d8157ac0499c426793f739a7154"
+  },
+  "cached_source_sha256": {
+    "results/recall-first/raw/speex.json": "8c7f9437de1d2627ff0ce909d96015fc9edb4ba4f2f37ff5d65692ac048aa945",
+    "results/recall-first/raw/silero-lite-0.4.0.npz": "082e228c73545fad10852dfcf5d1feb97c707f51aec7a7b97603375cb7ac5c89",
+    "results/recall-first/raw/classic-3.json": "58e8e7857073293416473f7cef83d07c8608ea53682aa9ef7968c1338f7a8153",
+    "results/recall-first/raw/agc2.json": "7b4485d93647c70fd56e6cc5505e249b738d897772254fabd548b08dedba035e",
+    "results/recall-first/raw/silero.json": "d70d83d1a5c4f58087f7b9ec46ec64f7204a9d295c729a5da3491dbc6c0af25e",
+    "results/recall-first/raw/silero-lite-0.4.0.json": "229e24a161ccbe31020d322eccf459df092703dd84f09c16c295f42b6740ed67",
+    "results/recall-first/raw/ten.json": "ea8d7da80b1aee03ac1b15ca40c38f4177dd512c6ae480330572866b623691e9",
+    "results/recall-first/raw/speex.npz": "7087e18b9d05c20523ffaa2db153707f272f9010ac91b3732c2dd739a24a246b",
+    "results/recall-first/raw/silero.npz": "082e228c73545fad10852dfcf5d1feb97c707f51aec7a7b97603375cb7ac5c89",
+    "results/recall-first/raw/silero-lite-0.3.0.npz": "24c7d715c53f63287a863625250bcc13b91a8fb52459e9dc2c94b26a9b10eac8",
+    "results/recall-first/raw/classic-1.json": "b25f3166cd0788764216f134d5e33b9318e1b251eec77c07b327b913954c86fa",
+    "results/recall-first/raw/ten.npz": "662cfaf9901705e6cff0fe34ca986b3607e01e27438d5f34ba55c561392e904e",
+    "results/recall-first/raw/classic-2.json": "3197c7af3ff806338262a3939ae9443e99ed11783a9abaa11a041ea776bd4fdb",
+    "results/recall-first/raw/classic-0.json": "9983fe1d2a32d82e1eca872e4c82ac8d64f41942fc7819cbfdd2f9f0ddadd0f2",
+    "results/recall-first/raw/classic-1.npz": "4eb80b4a0e1192b5f330ca01a68461fe382c2e6e7e70cc26b763d76e7a0cebdb",
+    "results/recall-first/raw/silero-lite-0.3.0.json": "554f0018fb31f4acf2003258a25258a133c4a4263539b59edf7d9156762d5e78",
+    "results/recall-first/raw/fsmn.npz": "eecfd24513cf4a2cb5ae9a9c8e488c90bc2543b70853d23b58f0f603ba244c52",
+    "results/recall-first/raw/rnnoise.npz": "c7bfae42fad970a97943eafcc0e5e7e91b82084a0665672218f434913f37155d",
+    "results/recall-first/raw/classic-0.npz": "62f09ff3abccb587f04e97b526c11ba134022dedd97c9c1283e3e18bccfc95e0",
+    "results/recall-first/raw/classic-2.npz": "3db992999c7c8a4fab8d9de7ea5c878b3d7dc83a27e01c99e27ea8c21065a7c7",
+    "results/recall-first/raw/rnnoise.json": "2ec4b554e63a0d6f297d5a0ad5a3f9daa858677b17816b8c577b041bdfcd0dc4",
+    "results/recall-first/raw/agc2.npz": "1f2654b55b797759ee4672a6845745f7af7c6c9f266c16d3621188f7795e87c3",
+    "results/recall-first/raw/fsmn.json": "e0efcac59bc4cbde361ff420777cef633f5ce7997f5b9329dbf4664d4c27e6be",
+    "results/recall-first/raw/classic-3.npz": "7231039fa1f64f3f23188abc723f7f5b75654845a1662a17969fde170b244fec"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "audit": {
+    "causal_pairs": 56,
+    "minutes": 36.266666666666666,
+    "negative_only_records": 32,
+    "negative_only_seconds": 256,
+    "records": 272,
+    "turns": 240
+  },
+  "generator": "boundary-flite-v1",
+  "generator_sha256": "54ff71053a90a572f8c9c12ab37559b07c6b457923017c66a95c9550301e437a",
+  "manifest_sha256": "9fba764ac3692dba68712e5b6ea78904288bc479cf44292c4a8a81ed089a7106",
+  "policy": "Do not overwrite audio, labels, split, or test manifest; use a new dataset version for changes.",
+  "stage": "before_model_scoring_and_selection",
+  "test_manifest_sha256": "d92496d5f067835f07026989340ccf91b59c3d8157ac0499c426793f739a7154"
+}

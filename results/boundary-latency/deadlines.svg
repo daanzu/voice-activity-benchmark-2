@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<rect width="1000" height="700" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#172033;font-size:14px}</style>
+<text x="30" y="30" style="font-size:22px;font-weight:bold">Frozen synthetic test: all-turn deadline success</text>
+<text x="30" y="55">Shared cutoff 0.5, 200 ms added silence; simulated acquisition only</text>
+<text x="30" y="104">classic-0</text>
+<rect x="225" y="92" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="232.00" y="107">0.0%</text>
+<rect x="590" y="92" width="9.33" height="20" rx="3" fill="#f97316"/>
+<text x="606.33" y="107">3.3%</text>
+<text x="30" y="146">classic-1</text>
+<rect x="225" y="134" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="232.00" y="149">0.0%</text>
+<rect x="590" y="134" width="9.33" height="20" rx="3" fill="#f97316"/>
+<text x="606.33" y="149">3.3%</text>
+<text x="30" y="188">classic-2</text>
+<rect x="225" y="176" width="186.67" height="20" rx="3" fill="#2563eb"/>
+<text x="418.67" y="191">66.7%</text>
+<rect x="590" y="176" width="144.67" height="20" rx="3" fill="#f97316"/>
+<text x="741.67" y="191">51.7%</text>
+<text x="30" y="230">classic-3</text>
+<rect x="225" y="218" width="275.33" height="20" rx="3" fill="#2563eb"/>
+<text x="507.33" y="233">98.3%</text>
+<rect x="590" y="218" width="135.33" height="20" rx="3" fill="#f97316"/>
+<text x="732.33" y="233">48.3%</text>
+<text x="30" y="272">silero</text>
+<rect x="225" y="260" width="261.33" height="20" rx="3" fill="#2563eb"/>
+<text x="493.33" y="275">93.3%</text>
+<rect x="590" y="260" width="121.33" height="20" rx="3" fill="#f97316"/>
+<text x="718.33" y="275">43.3%</text>
+<text x="30" y="314">silero-lite-0.3.0</text>
+<rect x="225" y="302" width="228.67" height="20" rx="3" fill="#2563eb"/>
+<text x="460.67" y="317">81.7%</text>
+<rect x="590" y="302" width="135.33" height="20" rx="3" fill="#f97316"/>
+<text x="732.33" y="317">48.3%</text>
+<text x="30" y="356">silero-lite-0.4.0</text>
+<rect x="225" y="344" width="261.33" height="20" rx="3" fill="#2563eb"/>
+<text x="493.33" y="359">93.3%</text>
+<rect x="590" y="344" width="121.33" height="20" rx="3" fill="#f97316"/>
+<text x="718.33" y="359">43.3%</text>
+<text x="30" y="398">agc2</text>
+<rect x="225" y="386" width="214.67" height="20" rx="3" fill="#2563eb"/>
+<text x="446.67" y="401">76.7%</text>
+<rect x="590" y="386" width="77.00" height="20" rx="3" fill="#f97316"/>
+<text x="674.00" y="401">27.5%</text>
+<text x="30" y="440">ten</text>
+<rect x="225" y="428" width="224.00" height="20" rx="3" fill="#2563eb"/>
+<text x="456.00" y="443">80.0%</text>
+<rect x="590" y="428" width="170.33" height="20" rx="3" fill="#f97316"/>
+<text x="767.33" y="443">60.8%</text>
+<text x="30" y="482">fsmn</text>
+<rect x="225" y="470" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="232.00" y="485">0.0%</text>
+<rect x="590" y="470" width="4.67" height="20" rx="3" fill="#f97316"/>
+<text x="601.67" y="485">1.7%</text>
+<text x="30" y="524">rnnoise</text>
+<rect x="225" y="512" width="252.00" height="20" rx="3" fill="#2563eb"/>
+<text x="484.00" y="527">90.0%</text>
+<rect x="590" y="512" width="189.00" height="20" rx="3" fill="#f97316"/>
+<text x="786.00" y="527">67.5%</text>
+<text x="30" y="566">speex</text>
+<rect x="225" y="554" width="144.67" height="20" rx="3" fill="#2563eb"/>
+<text x="376.67" y="569">51.7%</text>
+<rect x="590" y="554" width="0.00" height="20" rx="3" fill="#f97316"/>
+<text x="597.00" y="569">0.0%</text>
+<text x="225" y="625">START within 100 ms</text>
+<text x="590" y="625">First-episode END within 300 ms</text>
+<text x="30" y="655" style="font-size:12px">Nominal RMS boundaries: early-active responses can lower success; inspect uncertainty bands in the report.</text>
+<text x="30" y="676" style="font-size:12px">Original pause labels are support gaps, with longer RMS gaps. Artificial short-gap probe is reported separately.</text>
+</svg>

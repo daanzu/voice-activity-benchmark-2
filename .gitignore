@@ -18,3 +18,9 @@ results/context-ablation/report-output.json
 results/recall-first/raw/*.npz
 results/recall-first/setup-logs/
 notebooks/__marimo__/
+
+results/boundary-latency/raw/*.npz
+results/boundary-latency/verification/
+results/boundary-latency/summary.json
+results/boundary-latency/development-curves.json
+results/boundary-latency/per-turn-test.json
